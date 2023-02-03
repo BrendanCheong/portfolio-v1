@@ -39,86 +39,86 @@ const Nav = () => {
 		});
 	}, []);
 	return (
-		<>
-			<nav className='sticky top-0 z-50 flex items-center justify-between bg-primary-dark font-poppins text-white-base p-4 sm:p-6 md:px-10'>
-				<div id='brandLogo' className='w-16 sm:w-20 md:w-24'>
-					<ScrollLink
-						className='cursor-pointer'
-						to='home'
-						smooth
-						duration={500}
-						offset={-100}
-						isDynamic
-						onClick={handleLink}
-					>
-						<Image
-							src='/brand_assets/logo-v1.svg'
-							alt='brand logo'
-							layout='intrinsic'
-							width={165}
-							height={72}
-						/>
-					</ScrollLink>
-				</div>
-				<div>
-					<ul id='navItems' className='flex space-x-14'>
-						<li className='hidden md:block'>
-							<ScrollLink
-								className='transition ease-in font-mono hover:text-primary-light cursor-pointer'
-								to='about'
-								smooth
-								duration={500}
-								offset={-100}
-								isDynamic
-							>
-								1. About
-							</ScrollLink>
-						</li>
-						<li className='hidden md:block'>
-							<ScrollLink
-								className='transition ease-in font-mono hover:text-primary-light cursor-pointer'
-								to='work'
-								smooth
-								duration={500}
-								offset={-100}
-								isDynamic
-							>
-								2. Work
-							</ScrollLink>
-						</li>
-						<li className='hidden md:block'>
-							<ScrollLink
-								className='transition ease-in font-mono hover:text-primary-light cursor-pointer'
-								to='contact'
-								smooth
-								duration={500}
-								offset={-100}
-								isDynamic
-							>
-								3. Contact
-							</ScrollLink>
-						</li>
-						<li className='hidden md:block'>
-							<a
-								href='/layan_resume.pdf'
-								rel='noopener noreferrer'
-								target='_blank'
-								className='font-mono text-sm text-primary-light ring-1 ring-primary-light hover:bg-primary-light hover:bg-opacity-20 rounded-sm shadow-md transition ease-in py-2 px-4'
-							>
-								Resume
-							</a>
-						</li>
-						<li className='block md:hidden'>
-							<Hamburger
-								onclick={toggle}
-								classname={`hover:outline-none focus:outline-none menu ${menu}`}
+			<>
+				<nav className='bg-primary-dark font-poppins text-white-base sm:p-6 md:px-10 sticky top-0 z-50 flex items-center justify-between p-4'>
+					<div id='brandLogo' className='sm:w-20 md:w-24 w-16'>
+						<ScrollLink
+							className='cursor-pointer'
+							to='home'
+							smooth
+							duration={500}
+							offset={-100}
+							isDynamic
+							onClick={handleLink}
+						>
+							<Image
+								src='/brand_assets/logo-v1.svg'
+								alt='brand logo'
+								layout='intrinsic'
+								width={165}
+								height={72}
 							/>
-						</li>
-					</ul>
-				</div>
-			</nav>
-			<Menu isOpen={isOpen} linkHandler={handleLink} />
-		</>
+						</ScrollLink>
+					</div>
+					<div>
+						<ul id='navItems' className='space-x-14 flex'>
+							<li className='md:block hidden'>
+								<ScrollLink
+									className='hover:text-primary-light font-mono transition ease-in cursor-pointer'
+									to='about'
+									smooth
+									duration={500}
+									offset={-100}
+									isDynamic
+								>
+									1. About
+								</ScrollLink>
+							</li>
+							<li className='md:block hidden'>
+								<ScrollLink
+									className='hover:text-primary-light font-mono transition ease-in cursor-pointer'
+									to='work'
+									smooth
+									duration={500}
+									offset={-100}
+									isDynamic
+								>
+									2. Work
+								</ScrollLink>
+							</li>
+							<li className='md:block hidden'>
+								<ScrollLink
+									className='hover:text-primary-light font-mono transition ease-in cursor-pointer'
+									to='contact'
+									smooth
+									duration={500}
+									offset={-100}
+									isDynamic
+								>
+									3. Contact
+								</ScrollLink>
+							</li>
+							<li className='md:block hidden'>
+								<a
+									href='/layan_resume.pdf'
+									rel='noopener noreferrer'
+									target='_blank'
+									className='text-primary-light ring-1 ring-primary-light hover:bg-primary-light hover:bg-opacity-20 px-4 py-2 font-mono text-sm transition ease-in rounded-sm shadow-md'
+								>
+									Resume
+								</a>
+							</li>
+							<li className='md:hidden block'>
+								<Hamburger
+									onclick={toggle}
+									classname={`hover:outline-none focus:outline-none menu ${menu}`}
+								/>
+							</li>
+						</ul>
+					</div>
+				</nav>
+				<Menu isOpen={isOpen} linkHandler={handleLink} />
+			</>
 	);
 };
 

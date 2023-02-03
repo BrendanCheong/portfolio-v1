@@ -16,8 +16,8 @@ const FeaturedProjectCard = ({
 	contentSide = 'right',
 }) => {
 	return (
-		<div className='relative flex items-center my-6 sm:my-8 md:my-16'>
-			<div className={`grid grid-cols-1 grid-rows-1 md:grid-cols-2 gap-4`}>
+		<div className='sm:my-8 md:my-16 relative flex items-center my-6'>
+			<div className='md:grid-cols-2 grid grid-cols-1 grid-rows-1 gap-4'>
 				<div
 					className={`relative col-span-1 ${
 						contentSide === 'right'
@@ -31,9 +31,9 @@ const FeaturedProjectCard = ({
 						rel='noopener noreferrer'
 						target='_blank'
 					>
-						<div className='absolute w-full h-full bg-primary-dark  bg-opacity-90 md:bg-opacity-50 md:hover:bg-transparent rounded-md sm:rounded-lg shadow-2xl transition ease-in z-10' />
+						<div className='bg-primary-dark bg-opacity-90 md:bg-opacity-50 md:hover:bg-transparent sm:rounded-lg absolute z-10 w-full h-full transition ease-in rounded-md shadow-2xl' />
 						<Image
-							className='rounded-md sm:rounded-lg z-0'
+							className='sm:rounded-lg z-0 rounded-md'
 							src={image}
 							alt={title}
 							layout='intrinsic'
@@ -46,7 +46,7 @@ const FeaturedProjectCard = ({
 				</div>
 			</div>
 			<div
-				className={`absolute top-0 grid grid-cols-1 grid-rows-1 md:grid-cols-3 lg:grid-cols-5 gap-4 h-full`}
+				className='md:grid-cols-3 lg:grid-cols-5 absolute top-0 grid h-full grid-cols-1 grid-rows-1 gap-4'
 			>
 				<div
 					className={`col-span-1 md:col-span-2 lg:col-span-3 flex flex-col justify-center ${
@@ -80,7 +80,7 @@ const FeaturedProjectCard = ({
 						{subTitle}
 					</p>
 
-					<div className='md:bg-primary-base rounded-lg shadow-lg md:p-6 mb-4 sm:mb-5'>
+					<div className='md:bg-primary-base md:p-6 sm:mb-5 mb-4 rounded-lg shadow-lg'>
 						<p
 							className={`text-white-base md:text-white-dark text-sm sm:text-base ${
 								contentSide === 'left' ? 'text-left' : 'md:text-right'
@@ -104,7 +104,7 @@ const FeaturedProjectCard = ({
 								rel='noopener noreferrer'
 								target='_blank'
 							>
-								<FiGithub className='text-lg sm:text-xl text-white-base hover:text-primary-light transition ease-in' />
+								<FiGithub className='sm:text-xl text-white-base hover:text-primary-light text-lg transition ease-in' />
 							</a>
 						)}
 						{url && (
@@ -114,7 +114,7 @@ const FeaturedProjectCard = ({
 								rel='noopener noreferrer'
 								target='_blank'
 							>
-								<FiExternalLink className='text-lg sm:text-xl text-white-base hover:text-primary-light transition ease-in' />
+								<FiExternalLink className='sm:text-xl text-white-base hover:text-primary-light text-lg transition ease-in' />
 							</a>
 						)}
 					</div>

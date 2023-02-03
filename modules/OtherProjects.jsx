@@ -26,18 +26,6 @@ const OtherProjects = ({ projects }) => {
 			duration: 1,
 			delay: 0.3,
 		});
-
-		gsap.from('#otherProjects section', {
-			scrollTrigger: {
-				trigger: '#otherProjects section',
-				start: 'top 80%',
-			},
-			stagger: 0.2,
-			opacity: 0,
-			ease: 'expo.out',
-			duration: 0.1,
-			delay: 0.3,
-		});
 	}, []);
 	return (
 		<Container>
@@ -46,7 +34,7 @@ const OtherProjects = ({ projects }) => {
 				style={{ minHeight: '80vh' }}
 				className='flex flex-col justify-center py-20'
 			>
-				<div className='sm:inline-flex sm:items-center sm:space-x-3 mb-8 sm:mb-10'>
+				<div className='sm:inline-flex sm:items-center sm:space-x-3 sm:mb-10 mb-8'>
 					<Heading
 						type='h2'
 						isMono
@@ -60,7 +48,7 @@ const OtherProjects = ({ projects }) => {
 				</div>
 				<div
 					id='otherProjects'
-					className='grid grid-rows-1 grid-cols-1 md:grid-cols-2 gap-4 md:gap-5'
+					className='md:grid-cols-2 md:gap-5 grid grid-cols-1 grid-rows-1 gap-4'
 				>
 					{visibleProjects &&
 						visibleProjects.map((project) => (

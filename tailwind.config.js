@@ -1,11 +1,12 @@
+const colors = require('tailwindcss/colors');
+
 module.exports = {
-	purge: [
+	content: [
 		'./app/**/*.{js,ts,jsx,tsx}',
 		'./pages/**/*.{js,ts,jsx,tsx}',
 		'./components/**/*.{js,ts,jsx,tsx}',
 		'./modules/**/*.{js,ts,jsx,tsx}',
 	],
-	darkMode: false, // or 'media' or 'class'
 	theme: {
 		fontFamily: {
 			poppins: ['Poppins', 'sans-serif'],
@@ -23,11 +24,12 @@ module.exports = {
 					base: '#112240',
 					light: '#64FFDA',
 				},
+				green: colors.emerald,
+				purple: colors.violet,
+				yellow: colors.amber,
+				gray: colors.slate
 			},
 		},
-	},
-	variants: {
-		extend: {},
 	},
 	plugins: [],
 };
