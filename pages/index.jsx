@@ -34,7 +34,7 @@ const Home = ({ allProjects }) => {
 	const otherProjects = allProjects.filter((post) => post.isFeatured !== true);
 
 	return (
-		<Layout title='Layan Jayasinghe'>
+		<Layout title='Brendan Cheong'>
 			<Social />
 			<Email />
 			<HeroSection />

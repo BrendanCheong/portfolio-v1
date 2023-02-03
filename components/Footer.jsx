@@ -7,9 +7,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Footer = () => {
 	useEffect(() => {
-		gsap.from('#footerSocailItems a', {
+		gsap.from('#footerSocialItems a', {
 			scrollTrigger: {
-				trigger: '#footerSocailItems',
+				trigger: '#footerSocialItems',
 				start: 'top 102%',
 			},
 			opacity: 0,
@@ -23,14 +23,14 @@ const Footer = () => {
 	return (
 		<footer
 			id='footer'
-			className='bg-primary-dark font-poppins text-white-base border-b-2 border-primary-light flex flex-col items-center py-8 px-3 sm:px-4'
+			className='bg-primary-dark font-poppins text-white-base border-primary-light sm:px-4 flex flex-col items-center px-3 py-8 border-b-2'
 		>
 			<div
-				id='footerSocailItems'
-				className='flex lg:hidden justify-center space-x-7 mb-5'
+				id='footerSocialItems'
+				className='lg:hidden space-x-7 flex justify-center mb-5'
 			>
 				<a
-					href='https://github.com/LayanJay'
+					href='https://github.com/BrendanCheong'
 					aria-label='External link'
 					rel='me noopener noreferrer'
 					target='_blank'
@@ -46,7 +46,7 @@ const Footer = () => {
 					<FiTwitter className='text-lg sm:text-xl text-white-dark hover:text-primary-light transform hover:-translate-y-0.5 transition ease-in' />
 				</a>
 				<a
-					href='https://www.linkedin.com/in/layan-jayasinghe-944746215/'
+					href='https://www.linkedin.com/in/brendan-cheong-ern-jie/'
 					aria-label='External link'
 					rel='me noopener noreferrer'
 					target='_blank'
@@ -54,7 +54,7 @@ const Footer = () => {
 					<FiLinkedin className='text-lg sm:text-xl text-white-dark hover:text-primary-light transform hover:-translate-y-0.5 transition ease-in' />
 				</a>
 				<a
-					href='mailto:layanjayasinghe2@gmail.com'
+					href='mailto:brendancej1@gmail.com'
 					aria-label='External link'
 					rel='me noopener noreferrer'
 					target='_blank'
@@ -62,8 +62,8 @@ const Footer = () => {
 					<FiMail className='text-lg sm:text-xl text-white-dark hover:text-primary-light transform hover:-translate-y-0.5 transition ease-in' />
 				</a>
 			</div>
-			<p className='text-xs sm:text-sm text-white-dark text-center'>
-				Copyright © 2022 All Rights Reserved by Layan Jayasinghe
+			<p className='sm:text-sm text-white-dark text-xs text-center'>
+				{`Copyright © ${new Date().getFullYear()} All Rights Reserved by Brendan Cheong.`}
 			</p>
 		</footer>
 	);

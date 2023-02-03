@@ -4,7 +4,6 @@ import { useEffect } from 'react';
 import Container from '../components/Container';
 import FeaturedProjectCard from '../components/FeaturedProjectCard';
 import Heading from '../components/Heading';
-import Line from '../components/Line';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -29,7 +28,7 @@ const Featured = ({ projects }) => {
 				style={{ minHeight: '80vh' }}
 				className='flex flex-col justify-center py-20'
 			>
-				<div className='sm:inline-flex sm:items-center sm:space-x-3 mb-8 sm:mb-10'>
+				<div className='sm:inline-flex sm:items-center sm:space-x-3 sm:mb-10 mb-8' id='heading'>
 					<Heading
 						type='h2'
 						isMono
@@ -39,7 +38,6 @@ const Featured = ({ projects }) => {
 					>
 						Projects I’ve contributed
 					</Heading>
-					<Line width='md:w-32 lg:w-56' lineStyles='hidden md:block' />
 				</div>
 				<div className='flex flex-col'>
 					{projects &&

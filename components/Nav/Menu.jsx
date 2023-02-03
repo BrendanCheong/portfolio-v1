@@ -15,7 +15,7 @@ const Menu = ({ isOpen, linkHandler }) => {
 				<ul className='flex flex-col space-y-6'>
 					<li className='flex justify-start'>
 						<ScrollLink
-							className='transition ease-in font-mono text-primary-light hover:underline cursor-pointer'
+							className='text-primary-light hover:underline font-mono transition ease-in cursor-pointer'
 							to='about'
 							smooth
 							duration={500}
@@ -28,7 +28,7 @@ const Menu = ({ isOpen, linkHandler }) => {
 					</li>
 					<li className='flex justify-start'>
 						<ScrollLink
-							className='transition ease-in font-mono text-primary-light hover:underline cursor-pointer'
+							className='text-primary-light hover:underline font-mono transition ease-in cursor-pointer'
 							to='work'
 							smooth
 							duration={500}
@@ -41,7 +41,7 @@ const Menu = ({ isOpen, linkHandler }) => {
 					</li>
 					<li className='flex justify-start'>
 						<ScrollLink
-							className='transition ease-in font-mono text-primary-light hover:underline cursor-pointer'
+							className='text-primary-light hover:underline font-mono transition ease-in cursor-pointer'
 							to='contact'
 							smooth
 							duration={500}
@@ -54,10 +54,10 @@ const Menu = ({ isOpen, linkHandler }) => {
 					</li>
 					<li className='flex justify-start'>
 						<a
-							href='/layan_resume.pdf'
+							href='/Brendan_Cheong_Resume.pdf'
 							rel='noopener noreferrer'
 							target='_blank'
-							className='font-mono text-sm text-primary-light ring-1 ring-primary-light hover:bg-primary-light hover:bg-opacity-20 rounded-sm shadow-md transition ease-in py-2 px-4'
+							className='text-primary-light ring-1 ring-primary-light hover:bg-primary-light hover:bg-opacity-20 px-4 py-2 font-mono text-sm transition ease-in rounded-sm shadow-md'
 						>
 							Resume
 						</a>

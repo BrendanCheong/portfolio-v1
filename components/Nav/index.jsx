@@ -40,7 +40,7 @@ const Nav = () => {
 	}, []);
 	return (
 			<>
-				<nav className='bg-primary-dark font-poppins text-white-base sm:p-6 md:px-10 sticky top-0 z-50 flex items-center justify-between p-4'>
+				<nav className='bg-primary-dark font-poppins text-white-base sm:p-6 md:px-10 sticky top-0 z-50 flex items-center justify-between w-screen p-4'>
 					<div id='brandLogo' className='sm:w-20 md:w-24 w-16'>
 						<ScrollLink
 							className='cursor-pointer'
@@ -100,7 +100,7 @@ const Nav = () => {
 							</li>
 							<li className='md:block hidden'>
 								<a
-									href='/layan_resume.pdf'
+									href='/Brendan_Cheong_Resume.pdf'
 									rel='noopener noreferrer'
 									target='_blank'
 									className='text-primary-light ring-1 ring-primary-light hover:bg-primary-light hover:bg-opacity-20 px-4 py-2 font-mono text-sm transition ease-in rounded-sm shadow-md'

@@ -18,26 +18,26 @@ const NotFound = () => {
 		});
 	}, []);
 	return (
-		<Layout title='404: Not Found | Layan Jayasinghe'>
+		<Layout title='404: Not Found | Brendan Cheong'>
 			<Container>
 				<div
 					id='pageNotFound'
 					style={{ minHeight: '90vh' }}
-					className='flex justify-center items-center'
+					className='flex items-center justify-center'
 				>
 					<div className='flex flex-col items-center'>
-						<h1 className='font-mono font-semibold text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-primary-light mb-4'>
+						<h1 className='sm:text-6xl md:text-7xl lg:text-8xl text-primary-light mb-4 font-mono text-5xl font-semibold'>
 							404
 						</h1>
-						<p className='font-medium sm:text-lg md:text-xl lg:text-2xl'>
-							Page Not Found
+						<p className='sm:text-lg md:text-xl lg:text-2xl font-medium'>
+							Woops! There&apos;s nothing here!
 						</p>
 						<Button
 							onClick={() => router.push('/')}
 							margin='mx-auto my-16'
 							padding='py-3 px-8 sm:py-4 sm:px-12'
 						>
-							Go Home
+							You&apos;re Drunk! Go Home!
 						</Button>
 					</div>
 				</div>

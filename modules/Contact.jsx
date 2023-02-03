@@ -35,22 +35,18 @@ const Contact = () => {
 					align='text-center'
 					margin='mb-8'
 				>
-					Get In Touch
+					Lets Get In Touch!
 				</Heading>
-				<p className='text-white-dark text-sm md:text-base text-center mb-1'>
-					My inbox is always open.
-				</p>
-				<p className='text-white-dark text-sm md:text-base text-center max-w-lg mx-auto mb-1'>
-					Whether you have something to talk about or just want to say hi, I’ll
-					try my best to get back to you!
+				<p className='text-white-dark md:text-base max-w-lg mx-auto mb-1 text-sm text-center'>
+					Currently looking for Software Engineering Internships from May to August 2024. If you think I make a great addition to your team or if you&apos;d like to chat, feel free to contact me! I&apos;ll be sure to get back to you as soon as I can. I swear! 
 				</p>
 				<a
-					href='mailto:layanjayasinghe2@gmail.com'
+					href='mailto:brendancej1@gmail.com'
 					rel='noopener noreferrer'
 					target='_blank'
-					className='font-mono text-sm text-primary-light ring-1 ring-primary-light hover:bg-primary-light hover:bg-opacity-20 rounded-sm shadow-md transition ease-in mx-auto my-16 py-3 px-8 sm:py-4 sm:px-12'
+					className='text-primary-light ring-1 ring-primary-light hover:bg-primary-light hover:bg-opacity-20 sm:py-4 sm:px-12 px-8 py-3 mx-auto my-16 font-mono text-sm transition ease-in rounded-sm shadow-md'
 				>
-					Say Hi
+					Contact Me
 				</a>
 			</section>
 		</Container>

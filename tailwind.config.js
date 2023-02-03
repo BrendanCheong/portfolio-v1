@@ -1,5 +1,3 @@
-const colors = require('tailwindcss/colors');
-
 module.exports = {
 	content: [
 		'./app/**/*.{js,ts,jsx,tsx}',
@@ -15,19 +13,15 @@ module.exports = {
 		extend: {
 			colors: {
 				white: {
-					dark: '#8892B0',
-					base: '#CCD6F6',
-					default: '#f1f1f1',
+					dark: '#f4f4f5',
+					base: '#f9f5d7',
+					default: '#f8fafc',
 				},
 				primary: {
-					dark: '#0A192F',
-					base: '#112240',
-					light: '#64FFDA',
-				},
-				green: colors.emerald,
-				purple: colors.violet,
-				yellow: colors.amber,
-				gray: colors.slate
+					dark: '#1d2021',
+					base: '#282828',
+					light: '#f59e0b',
+				}
 			},
 		},
 	},

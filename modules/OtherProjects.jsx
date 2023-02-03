@@ -4,7 +4,6 @@ import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 import Button from '../components/Button';
 import Container from '../components/Container';
 import Heading from '../components/Heading';
-import Line from '../components/Line';
 import OtherProjectCard from '../components/OtherProjectCard';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -34,7 +33,7 @@ const OtherProjects = ({ projects }) => {
 				style={{ minHeight: '80vh' }}
 				className='flex flex-col justify-center py-20'
 			>
-				<div className='sm:inline-flex sm:items-center sm:space-x-3 sm:mb-10 mb-8'>
+				<div className='sm:inline-flex sm:items-center sm:space-x-3 sm:mb-10 mb-8' id='heading'>
 					<Heading
 						type='h2'
 						isMono
@@ -44,7 +43,6 @@ const OtherProjects = ({ projects }) => {
 					>
 						Other Projects
 					</Heading>
-					<Line lineStyles='hidden md:block' />
 				</div>
 				<div
 					id='otherProjects'

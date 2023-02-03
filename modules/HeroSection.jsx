@@ -22,26 +22,26 @@ const HeroSection = () => {
 			>
 				<div>
 					<Heading isMono type='h4' color='text-primary-light'>
-						Hi there, I am
+						Hi there, I&apos;m
 					</Heading>
 					<Heading type='h1' margin='mb-4 sm:mb-8'>
-						Layan Jayasinghe.
+						Brendan
 					</Heading>
 					<Heading type='h3' margin='mb-5' color='text-white-dark'>
-						Fullstack Developer & UI/UX Designer
+						I like making cool apps
 					</Heading>
 					<p className='mb-14 sm:text-lg text-white-dark max-w-xl'>
 						I&lsquo;m a professional Fullstack developer with UI/UX designing
-						skills. Currently, I&lsquo;m based in Colombo, Sri Lanka.
+						skills. I&lsquo;m based in Singapore. Where the sun always shines! (most of the time)
 					</p>
 
 					<a
-						href='/layan_resume.pdf'
+						href='https://www.linkedin.com/in/brendan-cheong-ern-jie/'
 						rel='noopener noreferrer'
 						target='_blank'
-						className='font-mono text-sm text-primary-light ring-1 ring-primary-light hover:bg-primary-light hover:bg-opacity-20 rounded-sm shadow-md transition ease-in mx-auto my-16 py-3 px-8 sm:py-4 sm:px-12'
+						className='text-primary-light ring-1 ring-primary-light hover:bg-primary-light hover:bg-opacity-20 sm:py-4 sm:px-12 px-8 py-3 mx-auto my-16 font-mono text-sm transition ease-in rounded-sm shadow-md'
 					>
-						Resume
+						Hit me up on LinkedIn!
 					</a>
 				</div>
 			</div>

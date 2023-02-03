@@ -16,12 +16,12 @@ Version 1 of my personal portfolio website. V0 was hosted on [UCC's servers](htt
 
 ### Priority
 
-- [ ] Redesign color scheme.
-- [ ] Change socials to custom socials.
+- [x] Redesign color scheme.
+- [ ] Change socials to custom socials. (Image and Resume)
 - [ ] Add Skills section
 - [ ] Redo Projects section
 - [ ] Add Work Experience section
-- [ ] Migrate to tailwind v3
+- [x] Migrate to tailwind v3
 
 ### Nice-to-haves
 
@@ -31,6 +31,7 @@ Version 1 of my personal portfolio website. V0 was hosted on [UCC's servers](htt
 - [ ] Migrate Programme to Typescript
 - [ ] Light Mode????
 - [ ] Add Contact page
+- [ ] Add to `_document.js` meta tags for `og:url` and `google-site-verification`
 
 ## Credits
 

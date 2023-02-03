@@ -7,20 +7,20 @@ class MyDocument extends Document {
 				<Head>
 					<meta
 						name='description'
-						content='Layan Jayasinghe is a full-stack developer who specializes in building (and occasionally designing) exceptional digital experiences.'
+						content='Brendan Cheong is a full-stack developer who specializes in making user-friendly applications for the world.'
 					/>
 					<meta name='image' content='/logo.png' />
-					<meta property='og:title' content='Layan Jayasinghe' />
+					<meta property='og:title' content='Brendan Cheong' />
 					<meta
 						property='og:description'
-						content='Layan Jayasinghe is a full-stack developer who specializes in building (and occasionally designing) exceptional digital experiences.'
+						content='Brendan Cheong is a full-stack developer who specializes in making user-friendly applications for the world.'
 					/>
 					<meta property='og:image' content='/logo.png' />
-					<meta name='twitter:creator' content='__x__LEO__x__' />
-					<meta name='twitter:title' content='Layan Jayasinghe' />
+					<meta property="og:type" content="website" data-react-helmet="true" />
+					<meta name='twitter:title' content='Brendan Cheong' />
 					<meta
 						name='twitter:description'
-						content='Layan Jayasinghe is a full-stack developer who specializes in building (and occasionally designing) exceptional digital experiences.'
+						content='Brendan Cheong is a full-stack developer who specializes in making user-friendly applications for the world.'
 					/>
 					<meta name='twitter:image' content='/logo.png' />
 
