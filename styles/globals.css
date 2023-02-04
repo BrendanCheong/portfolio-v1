@@ -62,6 +62,13 @@ html, body {
 	}
 }
 
+#bullet::before {
+	content: "▹";
+	position: absolute;
+	left: 0px;
+	color:#f59e0b;
+}
+
 .menu {
 	background-color: transparent;
 	border: none;

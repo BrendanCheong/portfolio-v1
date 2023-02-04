@@ -2,9 +2,18 @@ import { useEffect } from 'react';
 import { gsap } from 'gsap';
 import Container from '../components/Container';
 import Heading from '../components/Heading';
+import usePrefersReducedMotion from '../hooks/usePrefersReducedMotion';
 
 const HeroSection = () => {
+
+	const prefersReducedMotion = usePrefersReducedMotion();
+
 	useEffect(() => {
+
+		if (prefersReducedMotion) {
+			return;
+		}
+
 		gsap.from('#home', {
 			opacity: 0,
 			y: 40,
@@ -12,6 +21,8 @@ const HeroSection = () => {
 			duration: 1,
 			delay: 0.3,
 		});
+
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 	return (
 		<Container>

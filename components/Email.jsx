@@ -1,8 +1,14 @@
 import { gsap } from 'gsap';
 import { useEffect } from 'react';
+import { usePrefersReducedMotion } from '../hooks/usePrefersReducedMotion';
 
 const Email = () => {
 	useEffect(() => {
+
+		if (usePrefersReducedMotion) {
+			return;
+		}
+
 		const tl = gsap.timeline({ delay: 0.6 });
 
 		tl.from('#sideEmailContainer', {

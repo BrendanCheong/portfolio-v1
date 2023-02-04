@@ -4,14 +4,22 @@ import { useEffect } from 'react';
 import Container from '../components/Container';
 import FeaturedProjectCard from '../components/FeaturedProjectCard';
 import Heading from '../components/Heading';
+import usePrefersReducedMotion from "../hooks/usePrefersReducedMotion";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Featured = ({ projects }) => {
+	const prefersReducedMotion = usePrefersReducedMotion();
+
 	useEffect(() => {
-		gsap.from('#work', {
+		
+		if (prefersReducedMotion) {
+			return;
+		}
+
+		gsap.from('#projects', {
 			scrollTrigger: {
-				trigger: '#work',
+				trigger: '#projects',
 				start: 'top 80%',
 			},
 			opacity: 0,
@@ -20,11 +28,12 @@ const Featured = ({ projects }) => {
 			duration: 1,
 			delay: 0.3,
 		});
+	// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 	return (
 		<Container>
 			<section
-				id='work'
+				id='projects'
 				style={{ minHeight: '80vh' }}
 				className='flex flex-col justify-center py-20'
 			>

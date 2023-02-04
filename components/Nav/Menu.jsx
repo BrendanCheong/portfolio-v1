@@ -42,6 +42,19 @@ const Menu = ({ isOpen, linkHandler }) => {
 					<li className='flex justify-start'>
 						<ScrollLink
 							className='text-primary-light hover:underline font-mono transition ease-in cursor-pointer'
+							to='projects'
+							smooth
+							duration={500}
+							offset={-100}
+							isDynamic
+							onClick={linkHandler}
+						>
+							Projects
+						</ScrollLink>
+					</li>
+					<li className='flex justify-start'>
+						<ScrollLink
+							className='text-primary-light hover:underline font-mono transition ease-in cursor-pointer'
 							to='contact'
 							smooth
 							duration={500}

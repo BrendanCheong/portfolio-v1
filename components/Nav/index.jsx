@@ -89,13 +89,25 @@ const Nav = () => {
 							<li className='md:block hidden'>
 								<ScrollLink
 									className='hover:text-primary-light font-mono transition ease-in cursor-pointer'
+									to='projects'
+									smooth
+									duration={500}
+									offset={-100}
+									isDynamic
+								>
+									3. Projects
+								</ScrollLink>
+							</li>
+							<li className='md:block hidden'>
+								<ScrollLink
+									className='hover:text-primary-light font-mono transition ease-in cursor-pointer'
 									to='contact'
 									smooth
 									duration={500}
 									offset={-100}
 									isDynamic
 								>
-									3. Contact
+									4. Contact
 								</ScrollLink>
 							</li>
 							<li className='md:block hidden'>

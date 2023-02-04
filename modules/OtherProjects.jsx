@@ -5,6 +5,7 @@ import Button from '../components/Button';
 import Container from '../components/Container';
 import Heading from '../components/Heading';
 import OtherProjectCard from '../components/OtherProjectCard';
+import usePrefersReducedMotion from '../hooks/usePrefersReducedMotion';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -12,8 +13,14 @@ const OtherProjects = ({ projects }) => {
 	const [count, setCount] = useState(4);
 
 	const visibleProjects = projects.slice(0, count);
+	const prefersReducedMotion = usePrefersReducedMotion();
 
 	useEffect(() => {
+
+		if (prefersReducedMotion) {
+			return;
+		}
+
 		gsap.from('#other', {
 			scrollTrigger: {
 				trigger: '#other',
@@ -25,6 +32,7 @@ const OtherProjects = ({ projects }) => {
 			duration: 1,
 			delay: 0.3,
 		});
+	// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 	return (
 		<Container>

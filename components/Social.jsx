@@ -1,9 +1,18 @@
-import { FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
+import { FiGithub, FiLinkedin, FiMail, FiInstagram } from 'react-icons/fi';
 import { gsap } from 'gsap';
 import { useEffect } from 'react';
+import usePrefersReducedMotion from '../hooks/usePrefersReducedMotion';
 
 const Social = () => {
+
+	const prefersReducedMotion = usePrefersReducedMotion();
+
 	useEffect(() => {
+		
+		if (prefersReducedMotion) {
+			return;
+		}
+		
 		const tl = gsap.timeline({ delay: 0.6 });
 
 		tl.from('#socailItems a', {
@@ -13,6 +22,7 @@ const Social = () => {
 			ease: 'expo.out',
 			duration: 0.5,
 		});
+	// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 	return (
 		<div
@@ -27,14 +37,14 @@ const Social = () => {
 			>
 				<FiGithub className='text-lg sm:text-xl text-white-dark hover:text-primary-light transform hover:-translate-y-0.5 transition ease-in' />
 			</a>
-			{/**<a
-				href='https://twitter.com/__x__LEO__x__'
+			<a
+				href='https://www.instagram.com/brendancheongwastaken/'
 				aria-label='External link'
 				rel='me noopener noreferrer'
 				target='_blank'
 			>
-				<FiTwitter className='text-lg sm:text-xl text-white-dark hover:text-primary-light transform hover:-translate-y-0.5 transition ease-in' />
-			</a>*/}
+				<FiInstagram className='text-lg sm:text-xl text-white-dark hover:text-primary-light transform hover:-translate-y-0.5 transition ease-in' />
+			</a>
 			<a
 				href='https://www.linkedin.com/in/brendan-cheong-ern-jie/'
 				aria-label='External link'

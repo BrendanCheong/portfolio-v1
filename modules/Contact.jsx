@@ -3,11 +3,20 @@ import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 import { useEffect } from 'react';
 import Container from '../components/Container';
 import Heading from '../components/Heading';
+import usePrefersReducedMotion from '../hooks/usePrefersReducedMotion';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Contact = () => {
+
+	const prefersReducedMotion = usePrefersReducedMotion();
+
 	useEffect(() => {
+
+		if (prefersReducedMotion) {
+			return;
+		}
+
 		gsap.from('#contact', {
 			scrollTrigger: {
 				trigger: '#contact',
@@ -19,6 +28,7 @@ const Contact = () => {
 			duration: 1,
 			delay: 0.3,
 		});
+	// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 	return (
 		<Container>

@@ -3,6 +3,7 @@ import Layout from '../components/Layout';
 import Social from '../components/Social';
 import { getAllProjects } from '../lib/utils';
 import About from '../modules/About';
+import Work from '../modules/Work';
 import Contact from '../modules/Contact';
 import Featured from '../modules/Featured';
 import HeroSection from '../modules/HeroSection';
@@ -39,6 +40,7 @@ const Home = ({ allProjects }) => {
 			<Email />
 			<HeroSection />
 			<About />
+			<Work />
 			<Featured projects={featuredProjects} />
 			<OtherProjects projects={otherProjects} />
 			<Contact />

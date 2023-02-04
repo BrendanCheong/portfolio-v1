@@ -6,11 +6,20 @@ import Heading from '../components/Heading';
 import MyStack from '../components/MyStack';
 import { useEffect } from 'react';
 import useBlurImage from '../hooks/useBlurImage';
+import usePrefersReducedMotion from "../hooks/usePrefersReducedMotion";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
+
+	const prefersReducedMotion = usePrefersReducedMotion();
+
 	useEffect(() => {
+
+		if (prefersReducedMotion) {
+			return;
+		}
+
 		gsap.from('#about', {
 			scrollTrigger: {
 				trigger: '#about',
@@ -22,6 +31,7 @@ const About = () => {
 			duration: 1,
 			delay: 0.3,
 		});
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 	return (
 		<Container>
@@ -34,7 +44,6 @@ const About = () => {
 					<Heading type='h2' isMono color='text-primary-light'>
 						About Me
 					</Heading>
-					{ /**<Line /> */}
 				</div>
 				<div className='grid-col-1 lg:grid-cols-2 grid grid-rows-1 gap-8'>
 					<div>
@@ -71,13 +80,13 @@ const About = () => {
 						</p>
 						<MyStack />
 					</div>
-					<div className='hover:-translate-y-2 sm:w-80 w-64 mx-auto transition ease-in transform'>
+					<div className='hover:-translate-y-2 sm:w-80 relative w-64 mx-auto transition ease-in transform'>
 						<Image
 							className='z-0 rounded-lg shadow-md'
 							src='/profile_photo.png'
 							alt='A photo of me'
-							width={450}
-							height={450}
+							width={960}
+							height={1280}
 							layout='intrinsic'
 							placeholder='blur'
 							blurDataURL={useBlurImage(450, 450)}
