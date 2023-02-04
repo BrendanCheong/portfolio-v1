@@ -17,7 +17,8 @@ Version 1 of my personal portfolio website. V0 was hosted on [UCC's servers](htt
 ### Priority
 
 - [x] Redesign color scheme.
-- [ ] Change socials to custom socials. (Image and Resume)
+- [x] Change socials to custom socials. (Image and Resume)
+- [ ] Change logos to custom logos
 - [ ] Add Skills section
 - [ ] Redo Projects section
 - [ ] Add Work Experience section
@@ -27,10 +28,8 @@ Version 1 of my personal portfolio website. V0 was hosted on [UCC's servers](htt
 
 - [ ] Migrate to Next 13
 - [ ] Implement a Custom SiteMap
-- [ ] Change logos to custom logos
 - [ ] Migrate Programme to Typescript
 - [ ] Light Mode????
-- [ ] Add Contact page
 - [ ] Add to `_document.js` meta tags for `og:url` and `google-site-verification`
 
 ## Credits
