@@ -1,7 +1,7 @@
 import Email from '../components/Email';
 import Layout from '../components/Layout';
 import Social from '../components/Social';
-import { getAllProjects } from '../lib/utils';
+import { getProjects, getJobDescriptions } from '../lib/utils';
 import About from '../modules/About';
 import Work from '../modules/Work';
 import Contact from '../modules/Contact';
@@ -10,7 +10,7 @@ import HeroSection from '../modules/HeroSection';
 import OtherProjects from '../modules/OtherProjects';
 
 export const getStaticProps = () => {
-	const allProjects = getAllProjects([
+	const allProjects = getProjects([
 		'title',
 		'subTitle',
 		'description',
@@ -21,18 +21,32 @@ export const getStaticProps = () => {
 		'url',
 		'github',
 		'index',
+		'content'
+	]);
+
+	const allJobs = getJobDescriptions([
+		'title',
+		'role',
+		'company',
+		'range',
+		'url',
+		'techstack',
+		'content'
 	]);
 
 	return {
-		props: { allProjects },
+		props: { allProjects, allJobs },
 	};
 };
 
-const Home = ({ allProjects }) => {
+const Home = ({ allProjects, allJobs }) => {
 	const featuredProjects = allProjects.filter(
 		(post) => post.isFeatured === true
 	);
 	const otherProjects = allProjects.filter((post) => post.isFeatured !== true);
+
+	// sort allJobs based on attribute 'index' by ascending order
+	allJobs.sort((job1, job2) => (job1.index > job2.index ? 1 : -1));
 
 	return (
 		<Layout title='Brendan Cheong'>
@@ -40,7 +54,7 @@ const Home = ({ allProjects }) => {
 			<Email />
 			<HeroSection />
 			<About />
-			<Work />
+			<Work jobs={allJobs}/>
 			<Featured projects={featuredProjects} />
 			<OtherProjects projects={otherProjects} />
 			<Contact />
