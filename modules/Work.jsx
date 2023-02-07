@@ -51,7 +51,6 @@ const Work = ({ jobs }) => {
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [activeTabId]);
 
-
 	const focusTab = useCallback(() => {
 		if (tabs.current[tabFocus]) {
 			tabs.current[tabFocus].focus();
@@ -106,80 +105,75 @@ const Work = ({ jobs }) => {
 						Where I&apos;ve Worked
 					</Heading>
 				</div>
-				<div className='flex max_sm:block md:min-h-[20rem]' aria-label='work experience content'>
-					<section>
+				<div
+					className='flex max_sm:block md:min-h-[20rem]'
+					aria-label='work experience content'
+				>
+					<section className='md:w-1/3 w-full'>
 						<ul
-							className='relative z-3 w-max p-0 m-0 pl-6 -ml-6 max_sm:flex max_sm:overflow-auto max_sm:w-[calc(100% + 100px)] max_sm:pl-12 max_sm:-ml-12 max_sm:mb-8 max_xs:w-(100% + 50px) max_xs:pl-6 max_xs:-ml-6'
+							className='z-3 max_sm:flex max_sm:overflow-auto relative w-full'
 							onKeyDown={(e) => onKeyDown(e)}
 							aria-label='work experience tabs'
 						>
-						{jobs.map((job, index) => (
-							<li key={index}>
-								<button
-									className={`flex items-center w-[14rem] h-full px-5 py-2 border-l-2 border-solid bg-transparent ${
-										activeTabId === index ? 'text-primary-light border-primary-light' : 'text-white-base border-slate-700'
-									} text-sm font-mono text-left hover:bg-primary-light hover:text-primary-light hover:bg-opacity-10 transition ease-in max_md:px-4 max_sm:min-w-[7.5rem] max_sm:py-1 max_sm:px-4 max_sm:border-l-0 max_sm:border-b-2 max_sm:text-center break-words`}
-									onClick={() => setActiveTabId(index)}
-									ref={(el) => (tabs.current[index] = el)}
-									role='tab'
-									aria-label='tab button'
-									aria-selected={activeTabId === index}
-									aria-controls={`panel-${index}`}
-								>
-									{job.company}
-								</button>
-							</li>
-						))}
+							{jobs.map((job, index) => (
+								<li key={index}>
+									<button
+										className={`flex items-center w-full md:w-[10rem] h-full px-5 py-2 border-l-2 border-solid bg-transparent ${
+											activeTabId === index
+												? 'text-primary-light border-primary-light'
+												: 'text-white-base border-slate-700'
+										} text-sm font-mono text-left hover:bg-primary-light hover:text-primary-light hover:bg-opacity-10 transition ease-in break-words overflow-hidden`}
+										onClick={() => setActiveTabId(index)}
+										ref={(el) => (tabs.current[index] = el)}
+										role='tab'
+										aria-label='tab button'
+										aria-selected={activeTabId === index}
+										aria-controls={`panel-${index}`}
+									>
+										{job.company}
+									</button>
+								</li>
+							))}
 						</ul>
 					</section>
 					<section
-						className='sm:ml-5 relative w-full ml-0'
+						className='sm:ml-5 md:w-2/3 relative w-full ml-0'
 						aria-label='tab panels'
 						id='tab-panels'
 					>
 						<div className='w-full h-auto p-5'>
-							<ul>
-								<li>
-									<Heading type='h4' isMono={false} color='text-white-default'>
-										<span>{jobs[activeTabId].title}</span>
-										<span className='text-primary-light'>
-											&nbsp;@&nbsp;
-											<a href={jobs[activeTabId].url} target='_blank' rel="noreferrer">
-												<span className='hover:underline'>
-												{jobs[activeTabId].company}
-												</span>
-											</a>
+							<Heading type='h4' isMono={false} color='text-white-default'>
+								<span>{jobs[activeTabId].title}</span>
+								<span className='text-primary-light'>
+									&nbsp;@&nbsp;
+									<a
+										href={jobs[activeTabId].url}
+										target='_blank'
+										rel='noreferrer'
+									>
+										<span className='hover:underline'>
+											{jobs[activeTabId].company}
 										</span>
-									</Heading>
+									</a>
+								</span>
+							</Heading>
 
-									<p className='text-white-dark text-md mb-6 font-mono'>
-									{jobs[activeTabId].range}
-									</p>
-									<hr className='border-white-base border-[1px]' />
-									<ul className='text-white-dark pt-6 m-0 text-base'>
-										{jobs[activeTabId].content.map((bullet, index) => (
-											<li
-												key={index}
-												className='pl-7 font-poppins relative mb-2'
-												id='bullet'
-											>
-												<p>{bullet}</p>
-											</li>
-										))}
-									</ul>
-									{/**
-
-					/**<div className='stack-list'>
-						{techstack &&
-							techstack.map((tech, i) => (
-								<a className='stack-icon' key={tech}>
-									<Icon name={tech} />
-									<div className='stack-icon-name'>{tech}</div>
-								</a>
-							))}
-							</div>*/}
-								</li>
+							<p className='text-white-dark text-md mb-6 font-mono'>
+								{`${jobs[activeTabId].range}  •  ${jobs[activeTabId].role}`}
+							</p>
+							<hr className='border-white-base border-[1px] h-0 border-opacity-20' />
+							<ul className='text-white-dark pt-6 m-0 text-base'>
+								{jobs[activeTabId].content.map((bullet, index) => (
+									<li
+										key={index}
+										className='pl-7 font-poppins relative mb-2'
+										id='bullet'
+									>
+										<p>{bullet}</p>
+									</li>
+								))}
 							</ul>
+							<ul></ul>
 						</div>
 					</section>
 				</div>

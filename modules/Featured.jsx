@@ -12,7 +12,7 @@ const Featured = ({ projects }) => {
 	const prefersReducedMotion = usePrefersReducedMotion();
 
 	useEffect(() => {
-		
+
 		if (prefersReducedMotion) {
 			return;
 		}

@@ -3,6 +3,8 @@
 	"rules": {
 		"no-eval": "error",
 		"no-unused-vars": "error",
-		"no-unused-expressions": "error"
+		"no-unused-expressions": "error",
+		"no-console": "warn",
+		"no-trailing-spaces": "error"
 	}
 }
