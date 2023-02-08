@@ -31,6 +31,7 @@ export const getStaticProps = () => {
 		'range',
 		'url',
 		'techstack',
+		'index',
 		'content'
 	]);
 
@@ -46,7 +47,7 @@ const Home = ({ allProjects, allJobs }) => {
 	const otherProjects = allProjects.filter((post) => post.isFeatured !== true);
 
 	// sort allJobs based on attribute 'index' by ascending order
-	allJobs.sort((job1, job2) => (job1.index > job2.index ? 1 : -1));
+	allJobs.sort((job1, job2) => (job1.index - job2.index));
 
 	return (
 		<Layout title='Brendan Cheong'>
