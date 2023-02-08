@@ -4,7 +4,7 @@ role: "Part-time"
 company: "Ministry of Communications and Information"
 range: "Dec 2021 - Apr 2022"
 url: "https://www.mci.gov.sg/"
-techstack: ["Python", "VB.Net", "UiPath"]
+techstack: ["Python", "VBNet", "UiPath"]
 index: 3
 ---
 * Built an internal automated bot to register over 500 staff members for Zoom meetings every week.

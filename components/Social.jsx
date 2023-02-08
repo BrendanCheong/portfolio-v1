@@ -8,11 +8,11 @@ const Social = () => {
 	const prefersReducedMotion = usePrefersReducedMotion();
 
 	useEffect(() => {
-		
+
 		if (prefersReducedMotion) {
 			return;
 		}
-		
+
 		const tl = gsap.timeline({ delay: 0.6 });
 
 		tl.from('#socailItems a', {

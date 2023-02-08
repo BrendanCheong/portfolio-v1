@@ -7,6 +7,9 @@ const IconSql = () => (
 		xmlns='http://www.w3.org/2000/svg'
 		x='0px'
 		y='0px'
+		width='50px'
+		height='50px'
+		className='text-white-dark hover:text-primary-light fill-current transition-[opacity_.5s,color_.5s]'
 		viewBox='0 0 95.103 95.103'
 	>
 		<g>

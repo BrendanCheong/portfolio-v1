@@ -1,5 +1,6 @@
 import { IconBase } from 'react-icons';
-import {
+import { IconPython,
+	IconReact,
 	IconUiPath,
 	IconAWS,
 	IconCSS,
@@ -7,16 +8,19 @@ import {
 	IconFigma,
 	IconFlask,
 	IconHTML,
-    IconJavaScript,
-    IconTypescript,
-    IconNodeJS,
-    IconPython,
-    IconReact,
-    IconSQL,
+	IconJavaScript,
+	IconTypescript,
+	IconNodeJS,
+    IconVBNet,
+    IconTailwind,
+    IconNextJS,
+	IconSQL,
+    IconGraphQL,
+    IconElasticSearch,
+    IconMaterialUI
+} from './Icons/index';
 
-} from './Icons/IconUiPath';
-
-const Icon = ({ name }) => {
+export default function Icon({ name }) {
 	switch (name) {
 		case 'UiPath':
 			return <IconUiPath />;
@@ -28,6 +32,10 @@ const Icon = ({ name }) => {
             return <IconFastAPI />;
         case 'Figma':
             return <IconFigma />;
+        case 'Tailwind':
+            return <IconTailwind />;
+        case 'NextJS':
+            return <IconNextJS />;
         case 'Flask':
             return <IconFlask />;
         case 'HTML':
@@ -44,9 +52,15 @@ const Icon = ({ name }) => {
             return <IconReact />;
         case 'SQL':
             return <IconSQL />;
+        case 'VBNet':
+            return <IconVBNet />;
+        case 'GraphQL':
+            return <IconGraphQL />;
+        case 'ElasticSearch':
+            return <IconElasticSearch />;
+        case 'Material UI':
+            return <IconMaterialUI />;
 		default:
 			return <IconBase />;
 	}
 };
-
-export default Icon;

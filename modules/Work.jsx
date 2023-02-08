@@ -2,6 +2,7 @@ import { useEffect, useState, useRef, useCallback } from 'react';
 import { gsap } from 'gsap';
 import { KEY_CODES } from '../lib/data';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
+import Icon from '../components/Icon';
 import Heading from '../components/Heading';
 import Container from '../components/Container';
 import usePrefersReducedMotion from '../hooks/usePrefersReducedMotion';
@@ -13,8 +14,6 @@ const Work = ({ jobs }) => {
 	const [tabFocus, setTabFocus] = useState(null);
 	const tabs = useRef([]);
 	const prefersReducedMotion = usePrefersReducedMotion();
-
-	console.table(jobs);
 
 	useEffect(() => {
 		if (prefersReducedMotion) {
@@ -109,18 +108,21 @@ const Work = ({ jobs }) => {
 					className='flex max_sm:block md:min-h-[20rem]'
 					aria-label='work experience content'
 				>
-					<section className='md:w-1/3 w-full'>
+					<section
+						className='md:w-1/3 box-content w-full mb-2 align-middle'
+						id='work-tabs'
+					>
 						<ul
-							className='z-3 max_sm:flex max_sm:overflow-auto relative w-full'
+							className='z-3 max_sm:flex max_sm:overflow-x-scroll p-auto relative w-full'
 							onKeyDown={(e) => onKeyDown(e)}
 							aria-label='work experience tabs'
 						>
 							{jobs.map((job, index) => (
-								<li key={index}>
+								<li key={index} className='md:mb-0 sm:md-0 mb-5'>
 									<button
-										className={`flex items-center w-full md:w-[10rem] h-full px-5 py-2 border-l-2 border-solid bg-transparent ${
+										className={`flex items-center w-full md:w-[95%] h-full px-5 py-2 border-b-2 md:border-l-2 md:border-b-0 sm:border-b-0 sm:border-l-2 border-solid bg-transparent ${
 											activeTabId === index
-												? 'text-primary-light border-primary-light'
+												? 'text-primary-light border-primary-light bg-primary-light bg-opacity-10'
 												: 'text-white-base border-slate-700'
 										} text-sm font-mono text-left hover:bg-primary-light hover:text-primary-light hover:bg-opacity-10 transition ease-in break-words overflow-hidden`}
 										onClick={() => setActiveTabId(index)}
@@ -141,7 +143,7 @@ const Work = ({ jobs }) => {
 						aria-label='tab panels'
 						id='tab-panels'
 					>
-						<div className='w-full h-auto p-5'>
+						<div className='w-full h-auto'>
 							<Heading type='h4' isMono={false} color='text-white-default'>
 								<span>{jobs[activeTabId].title}</span>
 								<span className='text-primary-light'>
@@ -173,7 +175,23 @@ const Work = ({ jobs }) => {
 									</li>
 								))}
 							</ul>
-							<ul></ul>
+							<ul
+								className='flex flex-wrap justify-start p-2'
+								id='stack-list'
+								aria-label='stack-list'
+							>
+								{jobs[activeTabId].techstack.map((stack, index) => (
+									<li
+										key={index}
+										className='hover:text-primary-light/100 text-primary-light/0 hover:text-opacity-100 relative z-0 flex flex-col items-center justify-center w-10 h-10 mb-6 mr-4 transition-[opacity_.5s,color_.5s]'
+									>
+										<Icon name={stack} />
+										<i className='-bottom-5 whitespace-nowrap absolute font-mono text-xs'>
+											{stack}
+										</i>
+									</li>
+								))}
+							</ul>
 						</div>
 					</section>
 				</div>
