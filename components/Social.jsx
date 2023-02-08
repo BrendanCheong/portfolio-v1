@@ -15,7 +15,7 @@ const Social = () => {
 
 		const tl = gsap.timeline({ delay: 0.6 });
 
-		tl.from('#socailItems a', {
+		tl.from('#socialItems a', {
 			opacity: 0,
 			y: -10,
 			stagger: 0.1,

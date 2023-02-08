@@ -1,9 +1,15 @@
+import { useRef } from 'react';
 import { Link as ScrollLink } from 'react-scroll';
+import useOnClickOutside from '../../hooks/useClickOutside';
 
 const Menu = ({ isOpen, linkHandler }) => {
+
+	const wrapperRef = useRef();
+	useOnClickOutside(wrapperRef, linkHandler);
+
 	return (
 		<div
-			className={`fixed z-50 right-0 backdrop-filter transform ${
+			className={`fixed z-50 right-0 backdrop-filter transform pt-10 ${
 				isOpen ? 'left-0 h-full w-full backdrop-blur-sm' : 'backdrop-blur-none'
 			} transition-all duration-200 ease-in`}
 		>
@@ -11,6 +17,7 @@ const Menu = ({ isOpen, linkHandler }) => {
 				className={`absolute z-10 right-6 transform ${
 					isOpen ? 'translate-x-0' : 'translate-x-52'
 				} transition-all duration-200 ease-in bg-primary-base rounded-md shadow-md px-10 pt-5 pb-8`}
+				ref={wrapperRef}
 			>
 				<ul className='flex flex-col space-y-6'>
 					<li className='flex justify-start'>
