@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { FiGithub, FiLinkedin, FiMail, FiTwitter } from 'react-icons/fi';
+import { FiGithub, FiLinkedin, FiMail, FiInstagram } from 'react-icons/fi';
 import { gsap } from 'gsap';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 
@@ -38,12 +38,12 @@ const Footer = () => {
 					<FiGithub className='text-lg sm:text-xl text-white-dark hover:text-primary-light transform hover:-translate-y-0.5 transition ease-in' />
 				</a>
 				<a
-					href='https://twitter.com/__x__LEO__x__'
+					href='https://www.instagram.com/brendancheongwastaken/'
 					aria-label='External link'
 					rel='me noopener noreferrer'
 					target='_blank'
 				>
-					<FiTwitter className='text-lg sm:text-xl text-white-dark hover:text-primary-light transform hover:-translate-y-0.5 transition ease-in' />
+					<FiInstagram className='text-lg sm:text-xl text-white-dark hover:text-primary-light transform hover:-translate-y-0.5 transition ease-in' />
 				</a>
 				<a
 					href='https://www.linkedin.com/in/brendan-cheong-ern-jie/'

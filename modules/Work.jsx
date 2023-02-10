@@ -97,7 +97,7 @@ const Work = ({ jobs }) => {
 				className='flex flex-col justify-center'
 			>
 				<div
-					className='inline-flex items-center pl-6 mb-6 space-x-3'
+					className='inline-flex items-center mb-6 space-x-3'
 					id='heading'
 				>
 					<Heading type='h3' isMono color='text-primary-light'>
@@ -176,14 +176,14 @@ const Work = ({ jobs }) => {
 								))}
 							</ul>
 							<ul
-								className='flex flex-wrap justify-start p-2'
+								className='flex flex-wrap justify-start p-2 pt-6'
 								id='stack-list'
 								aria-label='stack-list'
 							>
 								{jobs[activeTabId].techstack.map((stack, index) => (
 									<li
 										key={index}
-										className='hover:text-primary-light/100 text-primary-light/0 hover:text-opacity-100 relative z-0 flex flex-col items-center justify-center w-10 h-10 mb-6 mr-4 transition-[opacity_.5s,color_.5s]'
+										className='hover:text-primary-light/100 text-primary-light/0 hover:text-opacity-100 relative z-0 flex flex-col items-start justify-end content-end place-content-end w-10 h-10 mb-6 mr-4 transition-[opacity_.5s,color_.5s]'
 									>
 										<Icon name={stack} />
 										<i className='-bottom-5 whitespace-nowrap absolute font-mono text-xs'>

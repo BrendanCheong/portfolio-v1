@@ -12,6 +12,10 @@ Version 1 of my personal portfolio website. V0 was hosted on [UCC's servers](htt
 - GSAP (Greensock)
 - Vercel
 
+Honorable mentions:
+
+- Figma (for editing images and svgs)
+
 ## TODO
 
 ### Priority

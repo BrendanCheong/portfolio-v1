@@ -25,7 +25,7 @@ const Menu = ({ isOpen, linkHandler }) => {
 							className='text-primary-light hover:underline font-mono transition ease-in cursor-pointer'
 							to='about'
 							smooth
-							duration={500}
+							duration={200}
 							offset={-100}
 							isDynamic
 							onClick={linkHandler}
@@ -38,7 +38,7 @@ const Menu = ({ isOpen, linkHandler }) => {
 							className='text-primary-light hover:underline font-mono transition ease-in cursor-pointer'
 							to='work'
 							smooth
-							duration={500}
+							duration={200}
 							offset={-100}
 							isDynamic
 							onClick={linkHandler}
@@ -51,7 +51,7 @@ const Menu = ({ isOpen, linkHandler }) => {
 							className='text-primary-light hover:underline font-mono transition ease-in cursor-pointer'
 							to='projects'
 							smooth
-							duration={500}
+							duration={200}
 							offset={-100}
 							isDynamic
 							onClick={linkHandler}
@@ -64,7 +64,7 @@ const Menu = ({ isOpen, linkHandler }) => {
 							className='text-primary-light hover:underline font-mono transition ease-in cursor-pointer'
 							to='contact'
 							smooth
-							duration={500}
+							duration={200}
 							offset={-100}
 							isDynamic
 							onClick={linkHandler}
