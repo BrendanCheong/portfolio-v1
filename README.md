@@ -19,7 +19,7 @@ Version 1 of my personal portfolio website. V0 was hosted on [UCC's servers](htt
 - [x] Redesign color scheme.
 - [x] Change socials to custom socials. (Image and Resume)
 - [x] Add scroll shadow effect to Navbar
-- [ ] Change logos to custom logos
+- [x] Change logos to custom logos
 - [ ] Add Skills section
 - [ ] Redo Projects section
 - [x] Add Work Experience section
