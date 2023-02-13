@@ -87,7 +87,7 @@ const Nav = () => {
 					<ul id='navItems' className='space-x-14 flex'>
 						<li className='md:block hidden'>
 							<ScrollLink
-								className='hover:text-primary-light font-mono transition ease-in cursor-pointer'
+								className='hover:text-primary-light font-mono truncate transition ease-in cursor-pointer'
 								to='about'
 								smooth
 								duration={500}
@@ -99,7 +99,7 @@ const Nav = () => {
 						</li>
 						<li className='md:block hidden'>
 							<ScrollLink
-								className='hover:text-primary-light font-mono transition ease-in cursor-pointer'
+								className='hover:text-primary-light font-mono truncate transition ease-in cursor-pointer'
 								to='work'
 								smooth
 								duration={500}
@@ -111,7 +111,7 @@ const Nav = () => {
 						</li>
 						<li className='md:block hidden'>
 							<ScrollLink
-								className='hover:text-primary-light font-mono transition ease-in cursor-pointer'
+								className='hover:text-primary-light font-mono truncate transition ease-in cursor-pointer'
 								to='projects'
 								smooth
 								duration={500}
@@ -123,7 +123,7 @@ const Nav = () => {
 						</li>
 						<li className='md:block hidden'>
 							<ScrollLink
-								className='hover:text-primary-light font-mono transition ease-in cursor-pointer'
+								className='hover:text-primary-light font-mono truncate transition ease-in cursor-pointer'
 								to='contact'
 								smooth
 								duration={500}
