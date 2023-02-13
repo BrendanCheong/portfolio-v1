@@ -8,6 +8,7 @@ import Contact from '../modules/Contact';
 import Featured from '../modules/Featured';
 import HeroSection from '../modules/HeroSection';
 import OtherProjects from '../modules/OtherProjects';
+import Skills from '../components/Skills';
 
 export const getStaticProps = () => {
 	const allProjects = getProjects([
@@ -55,6 +56,7 @@ const Home = ({ allProjects, allJobs }) => {
 			<Email />
 			<HeroSection />
 			<About />
+			<Skills />
 			<Work jobs={allJobs}/>
 			<Featured projects={featuredProjects} />
 			<OtherProjects projects={otherProjects} />
