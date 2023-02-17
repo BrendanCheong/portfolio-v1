@@ -97,10 +97,10 @@ const Work = ({ jobs }) => {
 				className='flex flex-col justify-center'
 			>
 				<div
-					className='inline-flex items-center mb-6 space-x-3'
-					id='heading'
+					className='inline-flex items-center mb-6 space-x-3 fter:content-[""] after:block after:relative after:w-[20%]
+					after:h-[2px] after:bg-primary-light after:ml-8 after:mb-2'
 				>
-					<Heading type='h3' isMono color='text-primary-light'>
+					<Heading type='h2' isMono color='text-primary-light'>
 						Where I&apos;ve Worked
 					</Heading>
 				</div>

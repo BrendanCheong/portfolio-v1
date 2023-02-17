@@ -63,78 +63,81 @@ const Skills = ({ frameworks, languages }) => {
 	const width = 400;
 	const height = 300;
 
-	const ref = useD3((svg) => {
-		if (!prefersReducedMotion) {
-			gsap.from(`#D3`, {
-				opacity: 0,
-				y: 40,
-				ease: 'power1.out',
-				duration: 0.3,
-				delay: 0.2,
-			});
-		}
-		const root = D3nodes[0];
+	const ref = useD3(
+		(svg) => {
+			if (!prefersReducedMotion) {
+				gsap.from(`#D3`, {
+					opacity: 0,
+					y: 40,
+					ease: 'power1.out',
+					duration: 0.3,
+					delay: 0.2,
+				});
+			}
+			const root = D3nodes[0];
 
-		root.radius = 0;
-		root.fixed = true;
+			root.radius = 0;
+			root.fixed = true;
 
-		const force = d3.layout
-			.force()
-			.gravity(0.08)
-			.friction(0.2)
-			.charge((_data, i) => {
-				return i ? 0 : -2000;
-			})
-			.nodes(D3nodes)
-			.size([width, height])
-			.on('tick', () => {
-				const q = d3.geom.quadtree(D3nodes);
-				const n = D3nodes.length;
+			const force = d3.layout
+				.force()
+				.gravity(0.08)
+				.friction(0.2)
+				.charge((_data, i) => {
+					return i ? 0 : -2000;
+				})
+				.nodes(D3nodes)
+				.size([width, height])
+				.on('tick', () => {
+					const q = d3.geom.quadtree(D3nodes);
+					const n = D3nodes.length;
 
-				range(0, n).forEach((_element, i) => {
-					q.visit(collide(D3nodes[i]));
+					range(0, n).forEach((_element, i) => {
+						q.visit(collide(D3nodes[i]));
+					});
+
+					svg
+						.selectAll('#skill-bubble')
+						.style('left', (data) => {
+							return `${data.x}px`;
+						})
+						.style('top', (data) => {
+							return `${data.y}px`;
+						});
+				})
+				.start();
+
+			svg = d3.select('#D3').attr('preserveAspectRatio', 'xMinYMin');
+
+			svg
+				.selectAll('#D3')
+				.data(D3nodes.slice(1))
+				.enter()
+				.append('li')
+				.attr('id', 'skill-bubble')
+				.attr(
+					'class',
+					'h-16 w-16 rounded-full translate-x-[-50%] translate-y-[-50%] absolute hover:text-primary-light/100 text-primary-light/0 hover:text-opacity-100 z-0 hover:z-50 text-center'
+				)
+				.html((data) => {
+					return data.svg;
+				})
+				.append('i')
+				.attr('class', 'font-poppins text-sm')
+				.attr('id', 'skill-name')
+				.html((data) => {
+					return data.title;
 				});
 
-				svg
-					.selectAll('#skill-bubble')
-					.style('left', (data) => {
-						return `${data.x}px`;
-					})
-					.style('top', (data) => {
-						return `${data.y}px`;
-					});
-			})
-			.start();
-
-		svg = d3.select('#D3').attr('preserveAspectRatio', 'xMinYMin');
-
-		svg
-			.selectAll('#D3')
-			.data(D3nodes.slice(1))
-			.enter()
-			.append('li')
-			.attr('id', 'skill-bubble')
-			.attr(
-				'class',
-				'h-16 w-16 rounded-full translate-x-[-50%] translate-y-[-50%] absolute hover:text-primary-light/100 text-primary-light/0 hover:text-opacity-100 z-0 hover:z-50 text-center'
-			)
-			.html((data) => {
-				return data.svg;
-			})
-			.append('i')
-			.attr('class', 'font-poppins text-sm')
-			.attr('id', 'skill-name')
-			.html((data) => {
-				return data.title;
+			svg.on('mousemove', function () {
+				const p1 = d3.mouse(this);
+				root.px = p1[0];
+				root.py = p1[1];
+				force.resume();
 			});
-
-		svg.on('mousemove', function () {
-			const p1 = d3.mouse(this);
-			root.px = p1[0];
-			root.py = p1[1];
-			force.resume();
-		});
-	}, [D3nodes]);
+		},
+		[D3nodes]
+	);
 
 	return (
 		<Container>
@@ -144,15 +147,21 @@ const Skills = ({ frameworks, languages }) => {
 				</div>
 				<div>
 					<div className='pb-5 space-y-2'>
-						<Heading type='h2' isMono color='text-primary-light'>
-							My Skills
-						</Heading>
+						<div
+							className='inline-flex items-center w-full mb-6 space-x-3 after:content-[""] after:block after:relative after:w-[20%]
+							after:h-[2px] after:bg-primary-light after:ml-8 after:mb-2'
+						>
+							<Heading type='h2' isMono color='text-primary-light'>
+								My Skills
+							</Heading>
+						</div>
+
 						<p className='text-md font-poppins text-white-default inline-block'>
 							Here are some Frameworks and Languages I&apos;ve worked with
 							recently:
 						</p>
 					</div>
-					<SelectionPanel activeTabId={activeTabId} onClickEffect={setIcons}/>
+					<SelectionPanel activeTabId={activeTabId} onClickEffect={setIcons} />
 				</div>
 			</section>
 		</Container>

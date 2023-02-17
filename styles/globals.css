@@ -30,17 +30,7 @@ html, body {
 	width: screen;
 	height: screen;
 }
-@media (min-width: 640px) {
-	#heading::after {
-		content: "";
-		display: block;
-		position: relative;
-		width: 20%;
-		height: 2px;
-		background: #f59e0b;
-		margin-left: 2rem;
-	}
-	
+@media (min-width: 640px) {	
 	#sideEmail::after {
 		content: "";
 		display: block;
