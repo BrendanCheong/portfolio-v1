@@ -57,13 +57,16 @@ const Home = ({ allProjects, allJobs, allIcons }) => {
 	// sort allJobs based on attribute 'index' by ascending order
 	allJobs.sort((job1, job2) => (job1.index - job2.index));
 
+	const frameworks = allIcons.filter((icon) => icon.category === 'Framework');
+	const languages = allIcons.filter((icon) => icon.category === 'Language');
+
 	return (
 		<Layout title='Brendan Cheong'>
 			<Social />
 			<Email />
 			<HeroSection />
 			<About />
-			<Skills icons={allIcons}/>
+			<Skills frameworks={frameworks} languages={languages}/>
 			<Work jobs={allJobs}/>
 			<Featured projects={featuredProjects} />
 			<OtherProjects projects={otherProjects} />

@@ -21,7 +21,7 @@ const Email = () => {
 	return (
 		<div
 			id='sideEmailContainer'
-			className='bottom-56 -right-14 lg:block fixed z-30 hidden'
+			className='bottom-36 -right-14 lg:block fixed z-30 hidden'
 		>
 			<a
 				className='hover:text-primary-light font-mono text-sm transition ease-in'
