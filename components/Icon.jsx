@@ -17,7 +17,10 @@ import { IconPython,
 	IconSQL,
     IconGraphQL,
     IconElasticSearch,
-    IconMaterialUI
+    IconMaterialUI,
+    IconJava,
+    IconGit,
+    IconMongoDB
 } from './Icons/index';
 
 export default function Icon({ name }) {
@@ -60,6 +63,12 @@ export default function Icon({ name }) {
             return <IconElasticSearch />;
         case 'Material UI':
             return <IconMaterialUI />;
+        case 'Java':
+            return <IconJava />;
+        case 'Git':
+            return <IconGit />;
+        case 'MongoDB':
+            return <IconMongoDB />;
 		default:
 			return <IconBase />;
 	}

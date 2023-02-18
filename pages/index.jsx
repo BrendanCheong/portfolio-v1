@@ -1,7 +1,7 @@
 import Email from '../components/Email';
 import Layout from '../components/Layout';
 import Social from '../components/Social';
-import { getProjects, getJobDescriptions } from '../lib/utils';
+import { getProjects, getJobDescriptions, getIconContents } from '../lib/utils';
 import About from '../modules/About';
 import Work from '../modules/Work';
 import Contact from '../modules/Contact';
@@ -36,12 +36,19 @@ export const getStaticProps = () => {
 		'content'
 	]);
 
+	const allIcons = getIconContents([
+		'title',
+		'svg',
+		'radius',
+		'category'
+	]);
+
 	return {
-		props: { allProjects, allJobs },
+		props: { allProjects, allJobs, allIcons },
 	};
 };
 
-const Home = ({ allProjects, allJobs }) => {
+const Home = ({ allProjects, allJobs, allIcons }) => {
 	const featuredProjects = allProjects.filter(
 		(post) => post.isFeatured === true
 	);
@@ -50,13 +57,16 @@ const Home = ({ allProjects, allJobs }) => {
 	// sort allJobs based on attribute 'index' by ascending order
 	allJobs.sort((job1, job2) => (job1.index - job2.index));
 
+	const frameworks = allIcons.filter((icon) => icon.category === 'Framework');
+	const languages = allIcons.filter((icon) => icon.category === 'Language');
+
 	return (
 		<Layout title='Brendan Cheong'>
 			<Social />
 			<Email />
 			<HeroSection />
 			<About />
-			<Skills />
+			<Skills frameworks={frameworks} languages={languages}/>
 			<Work jobs={allJobs}/>
 			<Featured projects={featuredProjects} />
 			<OtherProjects projects={otherProjects} />

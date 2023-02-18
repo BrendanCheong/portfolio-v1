@@ -11,6 +11,7 @@ Version 1 of my personal portfolio website. V0 was hosted on [UCC's servers](htt
 - TailwindCSS
 - GSAP (Greensock)
 - Vercel
+- D3
 
 Honorable mentions:
 
@@ -24,7 +25,7 @@ Honorable mentions:
 - [x] Change socials to custom socials. (Image and Resume)
 - [x] Add scroll shadow effect to Navbar
 - [x] Change logos to custom logos
-- [ ] Add Skills section
+- [x] Add Skills section
 - [ ] Redo Projects section
 - [x] Add Work Experience section
 - [x] Migrate to tailwind v3
@@ -33,7 +34,7 @@ Honorable mentions:
 
 - [ ] Migrate to Next 13
 - [ ] Implement a Custom SiteMap
-- [ ] Migrate Programme to Typescript
+- [ ] Refactor Program to Typescript
 - [ ] Light Mode????
 - [ ] Add to `_document.js` meta tags for `og:url` and `google-site-verification`
 

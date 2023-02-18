@@ -5,6 +5,7 @@
 		"no-unused-vars": "error",
 		"no-unused-expressions": "error",
 		"no-console": "warn",
-		"no-trailing-spaces": "error"
+		"no-trailing-spaces": "error",
+		"semi": "warn"
 	}
 }
