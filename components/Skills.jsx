@@ -171,7 +171,7 @@ const Skills = ({ frameworks, languages }) => {
 	return (
 		<Container verticalPadding='py-28 my-auto'>
 			<section className='flex flex-row items-start w-full h-full' id='skills'>
-				<div className='basis-5/12 md:block flex-grow-0 flex-shrink-0 order-last hidden ml-5'>
+				<div className='basis-5/12 lg:block flex-grow-0 flex-shrink-0 order-last hidden ml-5'>
 					<ul className='relative h-full' ref={ref} id='D3'></ul>
 				</div>
 				<div>
@@ -190,13 +190,13 @@ const Skills = ({ frameworks, languages }) => {
 							recently:
 						</p>
 					</div>
-					<div className='md:block hidden'>
+					<div className='lg:block hidden'>
 						<SelectionPanel
 							activeTabId={activeTabId}
 							onClickEffect={setIcons}
 						/>
 					</div>
-					<div className='md:hidden relative flex flex-col w-full'>
+					<div className='lg:hidden relative flex flex-col w-full'>
 						<SkillSection name={'Languages'} icons={languages} />
 						<SkillSection name={'Frameworks'} icons={frameworks} />
 					</div>

@@ -72,7 +72,7 @@ const About = () => {
 							during my Economics degree.
 						</p>
 						<p className='text-white-dark sm:text-base sm:leading-7 mb-3 text-sm leading-6'>
-							In the last three years, I completed a second major in{' '}
+							In the last four years, I completed a second major in{' '}
 							<a
 								href='https://www.comp.nus.edu.sg/programmes/ug/majorc/ba-secmajor/'
 								rel='noopener noreferrer'

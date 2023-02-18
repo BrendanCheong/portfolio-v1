@@ -118,7 +118,7 @@ const Work = ({ jobs }) => {
 							aria-label='work experience tabs'
 						>
 							{jobs.map((job, index) => (
-								<li key={index} className='md:mb-0 sm:md-0 mb-5'>
+								<li key={index} className='md:mb-0 sm:md-0'>
 									<button
 										className={`flex items-center w-full md:w-[95%] h-full px-5 py-2 border-b-2 md:border-l-2 md:border-b-0 sm:border-b-0 sm:border-l-2 border-solid bg-transparent ${
 											activeTabId === index
