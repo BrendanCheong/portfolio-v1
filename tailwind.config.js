@@ -21,20 +21,18 @@ module.exports = {
 					dark: '#1d2021',
 					base: '#282828',
 					light: '#f59e0b',
-				}
+				},
 			},
 
 			screens: {
-				'xs': {'min': '480px'},
-				'max_xs': {'max': '480px'},
-				'max_sm': {'max': '640px'},
-				'max_md': {'max': '768px'},
-				'max_lg': {'max': '1024px'},
-				'max_xl': {'max': '1280px'},
-			}
+				xs: { min: '480px' },
+				max_xs: { max: '480px' },
+				max_sm: { max: '640px' },
+				max_md: { max: '768px' },
+				max_lg: { max: '1024px' },
+				max_xl: { max: '1280px' },
+			},
 		},
 	},
-	plugins: [
-		require('@tailwindcss/typography'),
-	],
+	plugins: [require('@tailwindcss/typography')],
 };

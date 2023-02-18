@@ -13,23 +13,22 @@ const getInitialState = () =>
 	// occur.
 	isRenderingOnServer ? true : !window.matchMedia(QUERY).matches;
 
-    function usePrefersReducedMotion() {
+function usePrefersReducedMotion() {
+	const [prefersReducedMotion, setPrefersReducedMotion] =
+		useState(getInitialState);
 
-        const [prefersReducedMotion, setPrefersReducedMotion] =
-            useState(getInitialState);
+	useEffect(() => {
+		const mediaQueryList = window.matchMedia(QUERY);
+		const listener = (event) => {
+			setPrefersReducedMotion(!event.matches);
+		};
+		mediaQueryList.addEventListener('change', listener);
+		return () => {
+			mediaQueryList.addEventListener('change', listener);
+		};
+	}, []);
 
-        useEffect(() => {
-            const mediaQueryList = window.matchMedia(QUERY);
-            const listener = (event) => {
-                setPrefersReducedMotion(!event.matches);
-            };
-            mediaQueryList.addEventListener('change', listener);
-            return () => {
-                mediaQueryList.addEventListener('change', listener);
-            };
-        }, []);
-
-        return prefersReducedMotion;
-    }
+	return prefersReducedMotion;
+}
 
 export default usePrefersReducedMotion;

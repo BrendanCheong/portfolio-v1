@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import Container from '../components/Container';
 import FeaturedProjectCard from '../components/FeaturedProjectCard';
 import Heading from '../components/Heading';
-import usePrefersReducedMotion from "../hooks/usePrefersReducedMotion";
+import usePrefersReducedMotion from '../hooks/usePrefersReducedMotion';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -12,7 +12,6 @@ const Featured = ({ projects }) => {
 	const prefersReducedMotion = usePrefersReducedMotion();
 
 	useEffect(() => {
-
 		if (prefersReducedMotion) {
 			return;
 		}
@@ -28,7 +27,7 @@ const Featured = ({ projects }) => {
 			duration: 1,
 			delay: 0.3,
 		});
-	// eslint-disable-next-line react-hooks/exhaustive-deps
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 	return (
 		<Container>
@@ -37,8 +36,10 @@ const Featured = ({ projects }) => {
 				style={{ minHeight: '80vh' }}
 				className='flex flex-col justify-center py-20'
 			>
-				<div className='sm:inline-flex sm:items-center sm:space-x-3 sm:mb-10 mb-8 fter:content-[""] after:block after:relative after:w-[20%]
-				after:h-[2px] after:bg-primary-light after:ml-8 after:mb-2'>
+				<div
+					className='sm:inline-flex sm:items-center sm:space-x-3 sm:mb-10 mb-8 fter:content-[""] after:block after:relative after:w-[20%]
+				after:h-[2px] after:bg-primary-light after:ml-8 after:mb-2'
+				>
 					<Heading
 						type='h2'
 						isMono

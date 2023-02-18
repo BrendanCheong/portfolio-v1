@@ -4,11 +4,9 @@ import { useEffect } from 'react';
 import usePrefersReducedMotion from '../hooks/usePrefersReducedMotion';
 
 const Social = () => {
-
 	const prefersReducedMotion = usePrefersReducedMotion();
 
 	useEffect(() => {
-
 		if (prefersReducedMotion) {
 			return;
 		}
@@ -22,7 +20,7 @@ const Social = () => {
 			ease: 'expo.out',
 			duration: 0.5,
 		});
-	// eslint-disable-next-line react-hooks/exhaustive-deps
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 	return (
 		<div

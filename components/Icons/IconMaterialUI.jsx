@@ -7,9 +7,12 @@ function IconMaterialUI() {
 			width='50px'
 			height='50px'
 			viewBox='0 0 600 476.3'
-            className='text-white-dark hover:text-primary-light fill-current transition-[opacity_.5s,color_.5s]'
+			className='text-white-dark hover:text-primary-light fill-current transition-[opacity_.5s,color_.5s]'
 		>
-			<path fill='currentColor' d='M0 259.8V0l225 129.9v86.6L75 129.9v173.2z'></path>
+			<path
+				fill='currentColor'
+				d='M0 259.8V0l225 129.9v86.6L75 129.9v173.2z'
+			></path>
 			<path
 				fill='currentColor'
 				d='M225 129.9L450 0v259.8l-150 86.6-75-43.3 150-86.6v-86.6l-150 86.6z'

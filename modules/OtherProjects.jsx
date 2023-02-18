@@ -16,7 +16,6 @@ const OtherProjects = ({ projects }) => {
 	const prefersReducedMotion = usePrefersReducedMotion();
 
 	useEffect(() => {
-
 		if (prefersReducedMotion) {
 			return;
 		}
@@ -32,7 +31,7 @@ const OtherProjects = ({ projects }) => {
 			duration: 1,
 			delay: 0.3,
 		});
-	// eslint-disable-next-line react-hooks/exhaustive-deps
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 	return (
 		<Container>
@@ -41,7 +40,10 @@ const OtherProjects = ({ projects }) => {
 				style={{ minHeight: '80vh' }}
 				className='flex flex-col justify-center py-20'
 			>
-				<div className='sm:inline-flex sm:items-center sm:space-x-3 sm:mb-10 mb-8' id='heading'>
+				<div
+					className='sm:inline-flex sm:items-center sm:space-x-3 sm:mb-10 mb-8'
+					id='heading'
+				>
 					<Heading
 						type='h2'
 						isMono

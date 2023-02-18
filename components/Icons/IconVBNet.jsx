@@ -16,6 +16,6 @@ const IconVBNet = () => {
 			</g>
 		</svg>
 	);
-}
+};
 
 export default IconVBNet;

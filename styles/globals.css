@@ -23,16 +23,17 @@ html::-webkit-scrollbar {
 	background: #ca8a04;
 }
 
-html, body {
+html,
+body {
 	scroll-behavior: smooth;
 	overflow-x: hidden;
 	background-color: #1d2021;
 	width: screen;
 	height: screen;
 }
-@media (min-width: 640px) {	
+@media (min-width: 640px) {
 	#sideEmail::after {
-		content: "";
+		content: '';
 		display: block;
 		position: relative;
 		width: 1px;
@@ -42,7 +43,7 @@ html, body {
 	}
 
 	#socialItems::before {
-		content: "";
+		content: '';
 		display: block;
 		position: relative;
 		width: 1px;
@@ -53,10 +54,10 @@ html, body {
 }
 
 #bullet::before {
-	content: "▹";
+	content: '▹';
 	position: absolute;
 	left: 0px;
-	color:#f59e0b;
+	color: #f59e0b;
 }
 
 .menu {

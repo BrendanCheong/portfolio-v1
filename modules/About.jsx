@@ -6,16 +6,14 @@ import Heading from '../components/Heading';
 import MyStack from '../components/MyStack';
 import { useEffect } from 'react';
 import useBlurImage from '../hooks/useBlurImage';
-import usePrefersReducedMotion from "../hooks/usePrefersReducedMotion";
+import usePrefersReducedMotion from '../hooks/usePrefersReducedMotion';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
-
 	const prefersReducedMotion = usePrefersReducedMotion();
 
 	useEffect(() => {
-
 		if (prefersReducedMotion) {
 			return;
 		}
@@ -40,7 +38,7 @@ const About = () => {
 				style={{ minHeight: '80vh' }}
 				className='flex flex-col justify-center'
 			>
-				<div className='inline-flex items-center mb-6 space-x-3' id="heading">
+				<div className='inline-flex items-center mb-6 space-x-3' id='heading'>
 					<Heading type='h2' isMono color='text-primary-light'>
 						About Me
 					</Heading>
@@ -48,8 +46,8 @@ const About = () => {
 				<div className='grid-col-1 lg:grid-cols-2 grid grid-rows-1 gap-8'>
 					<div>
 						<p className='text-white-dark sm:text-base sm:leading-7 mb-3 text-sm leading-6'>
-							Hello! I&lsquo;m Brendan and I love to build things that live on the
-							web. Currently, I&lsquo;m a third-year student at{' '}
+							Hello! I&lsquo;m Brendan and I love to build things that live on
+							the web. Currently, I&lsquo;m a third-year student at{' '}
 							<a
 								href='https://www.nus.edu.sg/'
 								rel='noopener noreferrer'

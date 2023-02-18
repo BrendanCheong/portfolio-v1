@@ -19,7 +19,7 @@ import IconElasticSearch from './IconElasticSearch';
 import IconMaterialUI from './IconMaterialUI';
 import IconJava from './IconJava';
 import IconGit from './IconGit';
-import IconMongoDB from "./IconMongoDB";
+import IconMongoDB from './IconMongoDB';
 
 export {
 	IconPython,
@@ -43,5 +43,5 @@ export {
 	IconMaterialUI,
 	IconJava,
 	IconGit,
-	IconMongoDB
+	IconMongoDB,
 };

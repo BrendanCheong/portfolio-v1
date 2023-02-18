@@ -15,6 +15,6 @@ const IconUiPath = () => {
 			</g>
 		</svg>
 	);
-}
+};
 
 export default IconUiPath;

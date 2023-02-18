@@ -29,4 +29,4 @@ export const useWindowSize = () => {
 		return () => window.removeEventListener('resize', handleResize);
 	}, []); // Empty array ensures that effect is only run on mount
 	return windowSize;
-}
+};

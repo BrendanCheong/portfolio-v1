@@ -2,11 +2,10 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { KEY_CODES } from '../lib/data';
 
 const SelectionPanel = ({ activeTabId, onClickEffect }) => {
-
-    const [tabFocus, setTabFocus] = useState(null);
+	const [tabFocus, setTabFocus] = useState(null);
 	const tabs = useRef([]);
 
-    // TODO: Re-package this code to be reused in Work.jsx component as well
+	// TODO: Re-package this code to be reused in Work.jsx component as well
 	// TODO: Refactor tab buttons to be a component
 	const focusTab = useCallback(() => {
 		if (tabs.current[tabFocus]) {

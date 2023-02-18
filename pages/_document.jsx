@@ -5,7 +5,7 @@ class MyDocument extends Document {
 		return (
 			<Html lang='en'>
 				<Head>
-					<meta name="author" content="Brendan Cheong" />
+					<meta name='author' content='Brendan Cheong' />
 					<meta
 						name='description'
 						content='Brendan Cheong is a full-stack developer who specializes in making user-friendly applications for the world.'
@@ -17,8 +17,8 @@ class MyDocument extends Document {
 						content='Brendan Cheong is a full-stack developer who specializes in making user-friendly applications for the world.'
 					/>
 					<meta property='og:image' content='/logo.png' />
-					<meta property="og:type" content="website" data-react-helmet="true" />
-					<meta property="og:url" content="./" />
+					<meta property='og:type' content='website' data-react-helmet='true' />
+					<meta property='og:url' content='./' />
 					<meta name='twitter:title' content='Brendan Cheong' />
 					<meta
 						name='twitter:description'

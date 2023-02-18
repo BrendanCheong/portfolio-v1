@@ -8,11 +8,9 @@ import usePrefersReducedMotion from '../hooks/usePrefersReducedMotion';
 gsap.registerPlugin(ScrollTrigger);
 
 const Contact = () => {
-
 	const prefersReducedMotion = usePrefersReducedMotion();
 
 	useEffect(() => {
-
 		if (prefersReducedMotion) {
 			return;
 		}
@@ -28,7 +26,7 @@ const Contact = () => {
 			duration: 1,
 			delay: 0.3,
 		});
-	// eslint-disable-next-line react-hooks/exhaustive-deps
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 	return (
 		<Container>
@@ -48,7 +46,10 @@ const Contact = () => {
 					Lets Get In Touch!
 				</Heading>
 				<p className='text-white-dark md:text-base max-w-lg mx-auto mb-1 text-sm text-center'>
-					Currently looking for Software Engineering Internships from May to August 2024. If you think I make a great addition to your team or if you&apos;d like to chat, feel free to contact me! I&apos;ll be sure to get back to you as soon as I can. I swear! 
+					Currently looking for Software Engineering Internships from May to
+					August 2024. If you think I make a great addition to your team or if
+					you&apos;d like to chat, feel free to contact me! I&apos;ll be sure to
+					get back to you as soon as I can. I swear!
 				</p>
 				<a
 					href='mailto:brendancej1@gmail.com'

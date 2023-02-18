@@ -22,7 +22,7 @@ export const getStaticProps = () => {
 		'url',
 		'github',
 		'index',
-		'content'
+		'content',
 	]);
 
 	const allJobs = getJobDescriptions([
@@ -33,15 +33,10 @@ export const getStaticProps = () => {
 		'url',
 		'techstack',
 		'index',
-		'content'
+		'content',
 	]);
 
-	const allIcons = getIconContents([
-		'title',
-		'svg',
-		'radius',
-		'category'
-	]);
+	const allIcons = getIconContents(['title', 'svg', 'radius', 'category']);
 
 	return {
 		props: { allProjects, allJobs, allIcons },
@@ -55,7 +50,7 @@ const Home = ({ allProjects, allJobs, allIcons }) => {
 	const otherProjects = allProjects.filter((post) => post.isFeatured !== true);
 
 	// sort allJobs based on attribute 'index' by ascending order
-	allJobs.sort((job1, job2) => (job1.index - job2.index));
+	allJobs.sort((job1, job2) => job1.index - job2.index);
 
 	const frameworks = allIcons.filter((icon) => icon.category === 'Framework');
 	const languages = allIcons.filter((icon) => icon.category === 'Language');
@@ -66,8 +61,8 @@ const Home = ({ allProjects, allJobs, allIcons }) => {
 			<Email />
 			<HeroSection />
 			<About />
-			<Skills frameworks={frameworks} languages={languages}/>
-			<Work jobs={allJobs}/>
+			<Skills frameworks={frameworks} languages={languages} />
+			<Work jobs={allJobs} />
 			<Featured projects={featuredProjects} />
 			<OtherProjects projects={otherProjects} />
 			<Contact />

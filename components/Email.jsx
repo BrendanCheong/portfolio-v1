@@ -4,7 +4,6 @@ import { usePrefersReducedMotion } from '../hooks/usePrefersReducedMotion';
 
 const Email = () => {
 	useEffect(() => {
-
 		if (usePrefersReducedMotion) {
 			return;
 		}

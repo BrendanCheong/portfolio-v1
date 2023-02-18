@@ -197,8 +197,8 @@ const Skills = ({ frameworks, languages }) => {
 						/>
 					</div>
 					<div className='md:hidden relative flex flex-col w-full'>
-						<SkillSection name={'Languages'} icons={languages}/>
-						<SkillSection name={'Frameworks'} icons={frameworks}/>
+						<SkillSection name={'Languages'} icons={languages} />
+						<SkillSection name={'Frameworks'} icons={frameworks} />
 					</div>
 				</div>
 			</section>

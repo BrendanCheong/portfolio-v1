@@ -5,11 +5,9 @@ import Heading from '../components/Heading';
 import usePrefersReducedMotion from '../hooks/usePrefersReducedMotion';
 
 const HeroSection = () => {
-
 	const prefersReducedMotion = usePrefersReducedMotion();
 
 	useEffect(() => {
-
 		if (prefersReducedMotion) {
 			return;
 		}
@@ -43,7 +41,8 @@ const HeroSection = () => {
 					</Heading>
 					<p className='mb-14 sm:text-lg text-white-dark max-w-xl'>
 						I&lsquo;m a professional Fullstack developer with UI/UX designing
-						skills. I&lsquo;m based in Singapore. Where the sun always shines! (most of the time)
+						skills. I&lsquo;m based in Singapore. Where the sun always shines!
+						(most of the time)
 					</p>
 
 					<a

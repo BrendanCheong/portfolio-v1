@@ -23,6 +23,6 @@ const IconAWS = () => {
 			></path>
 		</svg>
 	);
-}
+};
 
 export default IconAWS;

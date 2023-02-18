@@ -16,6 +16,6 @@ const IconFastAPI = () => {
 			></path>
 		</svg>
 	);
-}
+};
 
 export default IconFastAPI;

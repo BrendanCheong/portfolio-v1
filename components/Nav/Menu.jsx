@@ -3,7 +3,6 @@ import { Link as ScrollLink } from 'react-scroll';
 import useOnClickOutside from '../../hooks/useClickOutside';
 
 const Menu = ({ isOpen, linkHandler }) => {
-
 	const wrapperRef = useRef();
 	useOnClickOutside(wrapperRef, linkHandler);
 

@@ -16,6 +16,6 @@ const IconTypescript = () => {
 			></path>
 		</svg>
 	);
-}
+};
 
 export default IconTypescript;

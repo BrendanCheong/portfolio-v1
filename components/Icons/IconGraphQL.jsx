@@ -7,7 +7,7 @@ function IconGraphQL() {
 			width='50px'
 			height='50px'
 			viewBox='20.8 4.2 358.4 391.6'
-            className='text-white-dark hover:text-primary-light fill-current transition-[opacity_.5s,color_.5s]'
+			className='text-white-dark hover:text-primary-light fill-current transition-[opacity_.5s,color_.5s]'
 		>
 			<g fill='currentColor'>
 				<path d='M57.468 302.66l-14.376-8.3 160.15-277.38 14.376 8.3z'></path>

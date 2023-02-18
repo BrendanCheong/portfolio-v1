@@ -56,14 +56,23 @@ const Nav = () => {
 		return () => {
 			window.removeEventListener('scroll', handleScroll);
 		};
-
 	}, [prefersReducedMotion]);
 	return (
 		<>
-			<nav className={`font-poppins text-white-base sm:p-6 md:px-10 fixed top-0 z-50 flex items-center justify-between w-screen p-4
-			${scrollDirection === 'up' && !scrolledToTop && 'h-[4.5rem] bg-opacity-90 shadow-2xl translate-y-0 shadow-zinc-900 bg-primary-dark duration-300 ease-in'}
-			${scrollDirection === 'down' && !scrolledToTop && 'translate-y-[-4.5rem] h-[4.5rem] transform duration-300 ease-out'}
-			`}>
+			<nav
+				className={`font-poppins text-white-base sm:p-6 md:px-10 fixed top-0 z-50 flex items-center justify-between w-screen p-4
+			${
+				scrollDirection === 'up' &&
+				!scrolledToTop &&
+				'h-[4.5rem] bg-opacity-90 shadow-2xl translate-y-0 shadow-zinc-900 bg-primary-dark duration-300 ease-in'
+			}
+			${
+				scrollDirection === 'down' &&
+				!scrolledToTop &&
+				'translate-y-[-4.5rem] h-[4.5rem] transform duration-300 ease-out'
+			}
+			`}
+			>
 				<div id='brandLogo' className='sm:w-20 md:w-24 w-16'>
 					<ScrollLink
 						className='cursor-pointer'

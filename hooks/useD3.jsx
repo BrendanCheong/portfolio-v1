@@ -7,7 +7,6 @@ export const useD3 = (renderFn, dependencies) => {
 	useEffect(() => {
 		renderFn(d3.select(ref.current));
 		return () => {};
-
 	}, [renderFn, dependencies]);
 
 	return ref;

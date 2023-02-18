@@ -45,9 +45,7 @@ const FeaturedProjectCard = ({
 					</a>
 				</div>
 			</div>
-			<div
-				className='md:grid-cols-3 lg:grid-cols-5 absolute top-0 grid h-full grid-cols-1 grid-rows-1 gap-4'
-			>
+			<div className='md:grid-cols-3 lg:grid-cols-5 absolute top-0 grid h-full grid-cols-1 grid-rows-1 gap-4'>
 				<div
 					className={`col-span-1 md:col-span-2 lg:col-span-3 flex flex-col justify-center ${
 						contentSide === 'right'

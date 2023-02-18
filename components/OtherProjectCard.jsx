@@ -50,9 +50,7 @@ const OtherProjectCard = ({ title, description, stack, url, github }) => {
 			</div>
 
 			<p className='text-white-base mb-3 text-sm leading-7'>{description}</p>
-			<div
-				className='sm:space-x-4 sm:text-sm text-white-dark inline-flex items-center space-x-2 font-mono text-xs'
-			>
+			<div className='sm:space-x-4 sm:text-sm text-white-dark inline-flex items-center space-x-2 font-mono text-xs'>
 				{stack && stack.map((item) => <p key={item}>{item}</p>)}
 			</div>
 		</section>
