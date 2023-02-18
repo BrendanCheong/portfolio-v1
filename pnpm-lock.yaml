@@ -10,6 +10,7 @@ specifiers:
   eslint-config-next: 12.0.3
   gray-matter: ^4.0.3
   gsap: ^3.8.0
+  husky: ^8.0.3
   lint-staged: ^11.2.6
   next: ^12.1.0
   next-sitemap: ^1.6.203
@@ -44,6 +45,7 @@ devDependencies:
   autoprefixer: 10.4.13_postcss@8.4.21
   eslint: 7.32.0
   eslint-config-next: 12.0.3_eslint@7.32.0+next@12.3.4
+  husky: 8.0.3
   lint-staged: 11.2.6
   postcss: 8.4.21
   prettier: 2.8.3
@@ -1680,6 +1682,12 @@ packages:
   /human-signals/2.1.0:
     resolution: {integrity: sha512-B4FFZ6q/T2jhhksgkbEW3HBvWIfDW85snkQgawt07S7J5QXTk6BkNV+0yAeZrM5QpMAdYlocGoljn0sJ/WQkFw==}
     engines: {node: '>=10.17.0'}
+    dev: true
+
+  /husky/8.0.3:
+    resolution: {integrity: sha512-+dQSyqPh4x1hlO1swXBiNb2HzTDN1I2IGLQx1GrBuiqFJfoMrnZWwVmatvSiO+Iz8fBUnf+lekwNo4c2LlXItg==}
+    engines: {node: '>=14'}
+    hasBin: true
     dev: true
 
   /ignore/4.0.6:
