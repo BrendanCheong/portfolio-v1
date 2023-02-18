@@ -1,12 +1,21 @@
-import React, { useState } from 'react';
+// lib
+import React, { useState, useEffect } from 'react';
 import * as d3 from 'd3';
 import { gsap } from 'gsap';
+import ScrollTrigger from 'gsap/dist/ScrollTrigger';
+
+// components
 import Container from '../components/Container';
-import { useD3 } from '../hooks/useD3';
+import SkillSection from './SkillSection';
 import Heading from './Heading';
-import { range } from '../lib/functions';
 import SelectionPanel from './SelectionPanel';
+
+// hooks
+import { useD3 } from '../hooks/useD3';
+import { range } from '../lib/functions';
 import usePrefersReducedMotion from '../hooks/usePrefersReducedMotion';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Skills = ({ frameworks, languages }) => {
 	// this D3 layout will create divs with background images that will be used as the skills icons
@@ -63,6 +72,25 @@ const Skills = ({ frameworks, languages }) => {
 	const width = 400;
 	const height = 300;
 
+	useEffect(() => {
+		if (prefersReducedMotion) {
+			return;
+		}
+
+		gsap.from('#skills', {
+			scrollTrigger: {
+				trigger: '#about',
+				start: 'bottom 60%',
+			},
+			opacity: 0,
+			y: 40,
+			ease: 'power3.out',
+			duration: 1,
+			delay: 0.3,
+		});
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, []);
+
 	const ref = useD3(
 		(svg) => {
 			if (!prefersReducedMotion) {
@@ -117,7 +145,7 @@ const Skills = ({ frameworks, languages }) => {
 				.attr('id', 'skill-bubble')
 				.attr(
 					'class',
-					'h-16 w-16 rounded-full translate-x-[-50%] translate-y-[-50%] absolute hover:text-primary-light/100 text-primary-light/0 hover:text-opacity-100 z-0 hover:z-50 text-center'
+					'h-16 w-16 rounded-full translate-x-[-50%] translate-y-[-50%] absolute hover:text-primary-light/100 text-primary-light/0 hover:text-opacity-100 z-0 hover:z-50 text-center items-center'
 				)
 				.html((data) => {
 					return data.svg;
@@ -140,8 +168,8 @@ const Skills = ({ frameworks, languages }) => {
 	);
 
 	return (
-		<Container>
-			<section className='flex flex-row items-start w-full h-full pb-10'>
+		<Container verticalPadding='py-28 my-auto'>
+			<section className='flex flex-row items-start w-full h-full' id='skills'>
 				<div className='basis-5/12 md:block flex-grow-0 flex-shrink-0 order-last hidden ml-5'>
 					<ul className='relative h-full' ref={ref} id='D3'></ul>
 				</div>
@@ -161,7 +189,16 @@ const Skills = ({ frameworks, languages }) => {
 							recently:
 						</p>
 					</div>
-					<SelectionPanel activeTabId={activeTabId} onClickEffect={setIcons} />
+					<div className='md:block hidden'>
+						<SelectionPanel
+							activeTabId={activeTabId}
+							onClickEffect={setIcons}
+						/>
+					</div>
+					<div className='md:hidden relative flex flex-col w-full'>
+						<SkillSection name={'Languages'} icons={languages}/>
+						<SkillSection name={'Frameworks'} icons={frameworks}/>
+					</div>
 				</div>
 			</section>
 		</Container>

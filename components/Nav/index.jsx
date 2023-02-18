@@ -100,7 +100,7 @@ const Nav = () => {
 						<li className='md:block hidden'>
 							<ScrollLink
 								className='hover:text-primary-light font-mono truncate transition ease-in cursor-pointer'
-								to='work'
+								to='skills'
 								smooth
 								duration={500}
 								offset={-100}

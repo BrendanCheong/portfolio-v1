@@ -2,8 +2,8 @@
 title: "Typescript"
 svg: "<svg
         xmlns='http://www.w3.org/2000/svg'
-        width='63px'
-        height='63px'
+        width='50px'
+        height='50px'
         viewBox='0 0 400 400'
         class='text-white-dark hover:text-primary-light fill-current transition-[opacity_.5s,color_.5s]'
 		>

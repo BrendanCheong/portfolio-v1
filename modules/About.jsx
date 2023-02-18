@@ -34,7 +34,7 @@ const About = () => {
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 	return (
-		<Container>
+		<Container verticalPadding='py-28'>
 			<section
 				id='about'
 				style={{ minHeight: '80vh' }}

@@ -23,7 +23,7 @@ const Work = ({ jobs }) => {
 		gsap.from('#work', {
 			scrollTrigger: {
 				trigger: '#about',
-				start: 'top 80%',
+				start: 'bottom 40%',
 			},
 			opacity: 0,
 			y: 40,
@@ -90,7 +90,7 @@ const Work = ({ jobs }) => {
 	};
 
 	return (
-		<Container verticalPadding='pt-20'>
+		<Container verticalPadding='py-28 my-auto'>
 			<section
 				id='work'
 				style={{ minheight: '80vh' }}
@@ -183,7 +183,7 @@ const Work = ({ jobs }) => {
 								{jobs[activeTabId].techstack.map((stack, index) => (
 									<li
 										key={index}
-										className='hover:text-primary-light/100 text-primary-light/0 hover:text-opacity-100 relative z-0 flex flex-col items-start justify-end content-end place-content-end w-10 h-10 mb-6 mr-4 transition-[opacity_.5s,color_.5s]'
+										className='hover:text-primary-light/100 text-primary-light/0 hover:text-opacity-100 relative z-0 flex flex-col items-center justify-end content-end place-content-end w-10 h-10 mb-6 mr-4 transition-[opacity_.5s,color_.5s]'
 									>
 										<Icon name={stack} />
 										<i className='-bottom-5 whitespace-nowrap absolute font-mono text-xs'>

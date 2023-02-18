@@ -17,6 +17,9 @@ import IconVBNet from './IconVBNet';
 import IconGraphQL from './IconGraphQL';
 import IconElasticSearch from './IconElasticSearch';
 import IconMaterialUI from './IconMaterialUI';
+import IconJava from './IconJava';
+import IconGit from './IconGit';
+import IconMongoDB from "./IconMongoDB";
 
 export {
 	IconPython,
@@ -37,5 +40,8 @@ export {
 	IconVBNet,
 	IconGraphQL,
 	IconElasticSearch,
-	IconMaterialUI
+	IconMaterialUI,
+	IconJava,
+	IconGit,
+	IconMongoDB
 };
