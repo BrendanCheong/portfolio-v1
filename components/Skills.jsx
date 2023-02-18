@@ -51,6 +51,7 @@ const Skills = ({ frameworks, languages }) => {
 		const nx2 = node.x + radius;
 		const ny1 = node.y - radius;
 		const ny2 = node.y + radius;
+
 		return (quad, x1, y1, x2, y2) => {
 			if (quad.point && quad.point !== node) {
 				let x = node.x - quad.point.x;
