@@ -40,9 +40,17 @@ const HeroSection = () => {
 						I like making cool apps
 					</Heading>
 					<p className='mb-14 sm:text-lg text-white-dark max-w-xl'>
-						I&lsquo;m a professional Fullstack developer with UI/UX designing
-						skills. I&lsquo;m based in Singapore. Where the sun always shines!
-						(most of the time)
+						I&lsquo;m a student at{' '}
+						<a
+							href='https://www.nus.edu.sg/'
+							rel='noopener noreferrer'
+							target='_blank'
+							className='text-primary-light hover:underline'
+						>
+							NUS
+						</a>{' '}
+						who aspires to be a software engineer. I believe in creating
+						user-friendly applications that people want.
 					</p>
 
 					<a

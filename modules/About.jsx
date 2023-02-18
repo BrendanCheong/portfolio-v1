@@ -44,7 +44,7 @@ const About = () => {
 					</Heading>
 				</div>
 				<div className='grid-col-1 lg:grid-cols-2 grid grid-rows-1 gap-8'>
-					<div>
+					<div className='space-y-8'>
 						<p className='text-white-dark sm:text-base sm:leading-7 mb-3 text-sm leading-6'>
 							Hello! I&lsquo;m Brendan and I love to build things that live on
 							the web. Currently, I&lsquo;m a third-year student at{' '}
@@ -58,20 +58,33 @@ const About = () => {
 							</a>{' '}
 							pursuing a degree in{' '}
 							<a
-								href='https://www.sliit.lk/computing/programmes/software-engineering-degree/'
+								href='https://fass.nus.edu.sg/ecs/'
 								rel='noopener noreferrer'
 								target='_blank'
 								className='text-primary-light hover:underline'
 							>
-								Information Technology specialization in Software Engineering
+								Economics
 							</a>
 							.
 						</p>
 						<p className='text-white-dark sm:text-base sm:leading-7 mb-3 text-sm leading-6'>
-							I aspire toward a career that will allow me to channel my
-							creativity through crafting beautiful software and engaging
-							experiences. When I&lsquo;m not on the computer, I enjoy
-							traveling, cooking, and petting dogs.
+							I am a self-driven, independent learner who picked up programming
+							during my Economics degree.
+						</p>
+						<p className='text-white-dark sm:text-base sm:leading-7 mb-3 text-sm leading-6'>
+							In the last three years, I completed a second major in{' '}
+							<a
+								href='https://www.comp.nus.edu.sg/programmes/ug/majorc/ba-secmajor/'
+								rel='noopener noreferrer'
+								target='_blank'
+								className='text-primary-light hover:underline'
+							>
+								Business Analytics
+							</a>{' '}
+							, learnt multiple programming languages, completed multiple
+							software engineering internships and personal projects. I hope to
+							pursue a career as a Software Engineer building impactful
+							products.
 						</p>
 						<p className='text-white-dark sm:text-base sm:leading-7 mb-3 text-sm leading-6'>
 							Here are a few technologies I&lsquo;ve been working with recently:
