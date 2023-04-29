@@ -26,7 +26,7 @@ Honorable mentions:
 - [x] Add scroll shadow effect to Navbar
 - [x] Change logos to custom logos
 - [x] Add Skills section
-- [ ] Redo Projects section
+- [x] Redo Projects section
 - [x] Add Work Experience section
 - [x] Migrate to tailwind v3
 

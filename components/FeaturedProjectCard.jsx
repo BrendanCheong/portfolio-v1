@@ -80,8 +80,7 @@ const FeaturedProjectCard = ({
 
 					<div className='md:bg-primary-base md:p-6 sm:mb-5 mb-4 rounded-lg shadow-lg'>
 						<p
-							className={`text-white-base md:text-white-dark text-sm sm:text-base ${
-								contentSide === 'left' ? 'text-left' : 'md:text-right'
+							className={`text-white-base md:text-white-dark text-sm sm:text-base
 							}`}
 						>
 							{description}

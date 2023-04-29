@@ -7,7 +7,7 @@ import Work from '../modules/Work';
 import Contact from '../modules/Contact';
 import Featured from '../modules/Featured';
 import HeroSection from '../modules/HeroSection';
-import OtherProjects from '../modules/OtherProjects';
+// import OtherProjects from '../modules/OtherProjects';
 import Skills from '../components/Skills';
 
 export const getStaticProps = () => {
@@ -47,6 +47,7 @@ const Home = ({ allProjects, allJobs, allIcons }) => {
 	const featuredProjects = allProjects.filter(
 		(post) => post.isFeatured === true
 	);
+	// eslint-disable-next-line no-unused-vars
 	const otherProjects = allProjects.filter((post) => post.isFeatured !== true);
 
 	// sort allJobs based on attribute 'index' by ascending order
@@ -64,7 +65,7 @@ const Home = ({ allProjects, allJobs, allIcons }) => {
 			<Skills frameworks={frameworks} languages={languages} />
 			<Work jobs={allJobs} />
 			<Featured projects={featuredProjects} />
-			<OtherProjects projects={otherProjects} />
+			{/* <OtherProjects projects={otherProjects} /> */}
 			<Contact />
 		</Layout>
 	);

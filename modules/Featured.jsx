@@ -47,7 +47,7 @@ const Featured = ({ projects }) => {
 						textSize='text-xl sm:text-2xl md:text-3xl'
 						align='text-center sm:text-left'
 					>
-						Projects I’ve contributed
+						Apps I Made
 					</Heading>
 				</div>
 				<div className='flex flex-col'>
