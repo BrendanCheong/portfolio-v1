@@ -1,6 +1,23 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
+import getConfig from 'next/config';
+
+const { publicRuntimeConfig } = getConfig();
 
 class MyDocument extends Document {
+	static async getInitialProps(ctx) {
+		const initialProps = await Document.getInitialProps(ctx);
+		const req = ctx.req;
+		const protocol = req.headers['x-forwarded-proto'] || 'http';
+		const host = req.headers['x-forwarded-host'] || req.headers.host;
+		const path = req.url;
+		const currentUrl = `${protocol}://${host}${path}`;
+
+		return {
+			...initialProps,
+			currentUrl,
+		};
+	}
+
 	render() {
 		return (
 			<Html lang='en'>
@@ -10,21 +27,34 @@ class MyDocument extends Document {
 						name='description'
 						content='Brendan Cheong is a full-stack developer who specializes in making user-friendly applications for the world.'
 					/>
-					<meta name='image' content='/logo.png' />
-					<meta property='og:title' content='Brendan Cheong' />
+					<meta
+						name='image'
+						content={`${this.props.currentUrl}rich-preview.png`}
+					/>
+					<meta
+						name='google-site-verification'
+						content={publicRuntimeConfig.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION}
+					/>
+					<meta property='og:title' content='Brendan Cheong Portfolio' />
 					<meta
 						property='og:description'
 						content='Brendan Cheong is a full-stack developer who specializes in making user-friendly applications for the world.'
 					/>
-					<meta property='og:image' content='/logo.png' />
+					<meta
+						property='og:image'
+						content={`${this.props.currentUrl}rich-preview.png`}
+					/>
 					<meta property='og:type' content='website' data-react-helmet='true' />
-					<meta property='og:url' content='./' />
+					<meta property='og:url' content={this.props.currentUrl} />
 					<meta name='twitter:title' content='Brendan Cheong' />
 					<meta
 						name='twitter:description'
 						content='Brendan Cheong is a full-stack developer who specializes in making user-friendly applications for the world.'
 					/>
-					<meta name='twitter:image' content='/logo.png' />
+					<meta
+						name='twitter:image'
+						content={`${this.props.currentUrl}rich-preview.png`}
+					/>
 
 					<link
 						rel='apple-touch-icon'

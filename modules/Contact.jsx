@@ -26,8 +26,8 @@ const Contact = () => {
 			duration: 1,
 			delay: 0.3,
 		});
-		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, []);
+	}, [prefersReducedMotion]);
+
 	return (
 		<Container>
 			<section
@@ -55,7 +55,7 @@ const Contact = () => {
 					href='mailto:brendancej1@gmail.com'
 					rel='noopener noreferrer'
 					target='_blank'
-					className='text-primary-light ring-1 ring-primary-light hover:bg-primary-light hover:bg-opacity-20 sm:py-4 sm:px-12 px-8 py-3 mx-auto my-16 font-mono text-sm transition ease-in rounded-sm shadow-md'
+					className='text-primary-light ring-1 ring-primary-light hover:bg-primary-light hover:bg-opacity-20 sm:py-4 sm:px-12 px-8 py-3 mx-auto my-16 font-mono text-sm text-center transition ease-in rounded-sm shadow-md'
 				>
 					Contact Me
 				</a>

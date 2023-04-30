@@ -33,10 +33,10 @@ Honorable mentions:
 ### Nice-to-haves
 
 - [ ] Migrate to Next 13
-- [ ] Implement a Custom SiteMap
+- [x] Implement a Custom SiteMap
 - [ ] Refactor Program to Typescript
 - [ ] Light Mode????
-- [ ] Add to `_document.js` meta tags for `og:url` and `google-site-verification`
+- [x] Add to `_document.js` meta tags for `og:url` and `google-site-verification`
 
 ## Credits
 

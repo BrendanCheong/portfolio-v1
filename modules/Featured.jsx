@@ -37,8 +37,8 @@ const Featured = ({ projects }) => {
 				className='flex flex-col justify-center py-20'
 			>
 				<div
-					className='sm:inline-flex sm:items-center sm:space-x-3 sm:mb-10 mb-8 fter:content-[""] after:block after:relative after:w-[20%]
-				after:h-[2px] after:bg-primary-light after:ml-8 after:mb-2'
+					className='sm:inline-flex sm:items-center sm:space-x-3 sm:mb-10 mb-8 fter:content-[""] after:block after:relative after:w-[85%]
+				after:h-[2px] after:bg-primary-light after:ml-8 after:mb-2 after:md:w-[20%]'
 				>
 					<Heading
 						type='h2'

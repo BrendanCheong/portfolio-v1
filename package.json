@@ -15,6 +15,7 @@
 	"dependencies": {
 		"@fontsource/poppins": "^4.5.0",
 		"@fontsource/roboto-mono": "^4.5.0",
+		"@vercel/analytics": "^1.0.0",
 		"d3": "^3.5.16",
 		"gray-matter": "^4.0.3",
 		"gsap": "^3.8.0",
