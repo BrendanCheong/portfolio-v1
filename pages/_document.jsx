@@ -1,8 +1,4 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
-import getConfig from 'next/config';
-
-const { publicRuntimeConfig } = getConfig();
-
 class MyDocument extends Document {
 	render() {
 		return (
@@ -19,7 +15,7 @@ class MyDocument extends Document {
 					/>
 					<meta
 						name='google-site-verification'
-						content={publicRuntimeConfig?.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION}
+						content='1oxF7G6_fEXhGoqV-vMT975YbJVIS6tnbpTr-uR2cCo'
 					/>
 					<meta property='og:title' content='Brendan Cheong Portfolio' />
 					<meta
