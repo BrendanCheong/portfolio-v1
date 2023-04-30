@@ -1,6 +1,6 @@
 import { gsap } from 'gsap';
 import { useEffect } from 'react';
-import { usePrefersReducedMotion } from '../hooks/usePrefersReducedMotion';
+import usePrefersReducedMotion from '../hooks/usePrefersReducedMotion';
 
 const Email = () => {
 	useEffect(() => {

@@ -6,11 +6,14 @@ const { publicRuntimeConfig } = getConfig();
 class MyDocument extends Document {
 	static async getInitialProps(ctx) {
 		const initialProps = await Document.getInitialProps(ctx);
-		const req = ctx.req;
-		const protocol = req.headers['x-forwarded-proto'] || 'http';
-		const host = req.headers['x-forwarded-host'] || req.headers.host;
-		const path = req.url;
-		const currentUrl = `${protocol}://${host}${path}`;
+		const req = ctx?.req;
+		let currentUrl = 'https://brendancej.tech';
+		if (req) {
+			const protocol = req?.headers['x-forwarded-proto'] || 'http';
+			const host = req?.headers['x-forwarded-host'] || req?.headers.host;
+			const path = req?.url;
+			currentUrl = `${protocol}://${host}${path}` || 'https://brendancej.tech';
+		}
 
 		return {
 			...initialProps,
@@ -29,11 +32,11 @@ class MyDocument extends Document {
 					/>
 					<meta
 						name='image'
-						content={`${this.props.currentUrl}rich-preview.png`}
+						content={`${this.props?.currentUrl}rich-preview.png`}
 					/>
 					<meta
 						name='google-site-verification'
-						content={publicRuntimeConfig.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION}
+						content={publicRuntimeConfig?.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION}
 					/>
 					<meta property='og:title' content='Brendan Cheong Portfolio' />
 					<meta
@@ -42,10 +45,10 @@ class MyDocument extends Document {
 					/>
 					<meta
 						property='og:image'
-						content={`${this.props.currentUrl}rich-preview.png`}
+						content={`${this.props?.currentUrl}rich-preview.png`}
 					/>
 					<meta property='og:type' content='website' data-react-helmet='true' />
-					<meta property='og:url' content={this.props.currentUrl} />
+					<meta property='og:url' content={this.props?.currentUrl} />
 					<meta name='twitter:title' content='Brendan Cheong' />
 					<meta
 						name='twitter:description'
@@ -53,7 +56,7 @@ class MyDocument extends Document {
 					/>
 					<meta
 						name='twitter:image'
-						content={`${this.props.currentUrl}rich-preview.png`}
+						content={`${this.props?.currentUrl}rich-preview.png`}
 					/>
 
 					<link
