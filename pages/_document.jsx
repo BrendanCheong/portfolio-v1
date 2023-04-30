@@ -4,23 +4,6 @@ import getConfig from 'next/config';
 const { publicRuntimeConfig } = getConfig();
 
 class MyDocument extends Document {
-	static async getInitialProps(ctx) {
-		const initialProps = await Document.getInitialProps(ctx);
-		const req = ctx?.req;
-		let currentUrl = 'https://brendancej.tech';
-		if (req) {
-			const protocol = req?.headers['x-forwarded-proto'] || 'http';
-			const host = req?.headers['x-forwarded-host'] || req?.headers.host;
-			const path = req?.url;
-			currentUrl = `${protocol}://${host}${path}` || 'https://brendancej.tech';
-		}
-
-		return {
-			...initialProps,
-			currentUrl,
-		};
-	}
-
 	render() {
 		return (
 			<Html lang='en'>
@@ -32,7 +15,7 @@ class MyDocument extends Document {
 					/>
 					<meta
 						name='image'
-						content={`${this.props?.currentUrl}rich-preview.png`}
+						content={`https://brendancej.tech/rich-preview.png`}
 					/>
 					<meta
 						name='google-site-verification'
@@ -45,7 +28,7 @@ class MyDocument extends Document {
 					/>
 					<meta
 						property='og:image'
-						content={`${this.props?.currentUrl}rich-preview.png`}
+						content={`https://brendancej.tech/rich-preview.png`}
 					/>
 					<meta property='og:type' content='website' data-react-helmet='true' />
 					<meta property='og:url' content={this.props?.currentUrl} />
@@ -56,7 +39,7 @@ class MyDocument extends Document {
 					/>
 					<meta
 						name='twitter:image'
-						content={`${this.props?.currentUrl}rich-preview.png`}
+						content={`https://brendancej.tech/rich-preview.png`}
 					/>
 
 					<link
