@@ -7,7 +7,7 @@
 		"start": "next start",
 		"lint": "next lint",
 		"format": "prettier --write .",
-		"postbuild": "next-sitemap --config custom-next-sitemap.js"
+		"postbuild": "next-sitemap --config custom-next-sitemap.cjs"
 	},
 	"lint-staged": {
 		"**/*.{js,jsx,ts,tsx}": "prettier --write --ignore-unknown"
@@ -15,6 +15,9 @@
 	"dependencies": {
 		"@fontsource/poppins": "^4.5.0",
 		"@fontsource/roboto-mono": "^4.5.0",
+		"@types/d3": "^7.4.0",
+		"@types/node": "^18.16.3",
+		"@types/react": "^18.2.0",
 		"@vercel/analytics": "^1.0.0",
 		"d3": "^3.5.16",
 		"gray-matter": "^4.0.3",
@@ -23,20 +26,26 @@
 		"next-sitemap": "^1.6.203",
 		"react": "17.0.2",
 		"react-dom": "17.0.2",
-		"react-icons": "^4.3.1",
+		"react-icons": "^4.8.0",
 		"react-scroll": "^1.8.4",
 		"remark": "^14.0.2",
-		"remark-html": "^15.0.0"
+		"remark-html": "^15.0.0",
+		"typescript": "^5.0.4"
 	},
 	"devDependencies": {
 		"@tailwindcss/typography": "^0.5.9",
+		"@types/react-scroll": "^1.8.6",
+		"@typescript-eslint/eslint-plugin": "^5.59.1",
+		"@typescript-eslint/parser": "^5.59.1",
 		"autoprefixer": "^10.4.13",
-		"eslint": "7",
+		"eslint": "^7.32.0",
 		"eslint-config-next": "12.0.3",
+		"eslint-config-prettier": "^8.8.0",
+		"eslint-plugin-prettier": "^4.2.1",
 		"husky": "^8.0.3",
 		"lint-staged": "^11.2.6",
 		"postcss": "^8.4.21",
-		"prettier": "^2.4.1",
+		"prettier": "^2.8.3",
 		"prettier-plugin-tailwindcss": "^0.2.2",
 		"tailwindcss": "^3.2.4"
 	}

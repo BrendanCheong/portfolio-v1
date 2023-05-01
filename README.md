@@ -34,7 +34,7 @@ Honorable mentions:
 
 - [ ] Migrate to Next 13
 - [x] Implement a Custom SiteMap
-- [ ] Refactor Program to Typescript
+- [x] Refactor Program to Typescript
 - [ ] Light Mode????
 - [x] Add to `_document.js` meta tags for `og:url` and `google-site-verification`
 
