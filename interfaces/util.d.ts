@@ -31,6 +31,7 @@ export type Job = {
 	url: string;
 	techstack: string[];
 	index: number;
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	content?: any;
 };
 

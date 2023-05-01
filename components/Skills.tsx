@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
 // lib
 import React, { useState, useEffect } from 'react';
@@ -56,7 +57,7 @@ const Skills = ({ frameworks, languages }: SkillsProps) => {
 		}
 	};
 
-	const collide = (node: any) => {
+	const collide = (node: unknown) => {
 		const radius = node.radius + 1;
 		const nx1 = node.x - radius;
 		const nx2 = node.x + radius;

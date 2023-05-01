@@ -3,6 +3,7 @@ import { KEY_CODES } from '@lib/data';
 
 interface SelectionPanelProps {
 	activeTabId: number;
+	// eslint-disable-next-line no-unused-vars
 	onClickEffect: (index: number) => void;
 }
 

@@ -15,13 +15,7 @@
 				"ignoreRestSiblings": true
 			}
 		],
-		"no-unused-expressions": [
-			"warn",
-			{
-				"args": "after-used",
-				"ignoreRestSiblings": true
-			}
-		],
+		"no-unused-expressions": "warn",
 		"no-console": "warn",
 		"no-trailing-spaces": "error",
 		"semi": "warn"
