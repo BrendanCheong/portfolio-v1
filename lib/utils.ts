@@ -6,7 +6,7 @@ import { remark } from 'remark';
 import html from 'remark-html';
 
 // types
-import { Project, ItemData, Job, Icon } from '@/interfaces/util';
+import { Project, ItemData, Job, Icon } from '@interfaces/util';
 
 const projectsDirectory = join(process.cwd(), 'projects');
 const jobsDirectory = join(process.cwd(), 'jobs');
