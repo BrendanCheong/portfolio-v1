@@ -47,8 +47,8 @@ const Home = ({ allProjects, allJobs, allIcons }) => {
 	const featuredProjects = allProjects.filter(
 		(post) => post.isFeatured === true
 	);
-	// eslint-disable-next-line no-unused-vars
-	const otherProjects = allProjects.filter((post) => post.isFeatured !== true);
+
+	// const otherProjects = allProjects.filter((post) => post.isFeatured !== true);
 
 	// sort allJobs based on attribute 'index' by ascending order
 	allJobs.sort((job1, job2) => job1.index - job2.index);

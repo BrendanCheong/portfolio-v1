@@ -1,5 +1,5 @@
 export const range = (start: number, end: number, step = 1) => {
-	let output: number[] = new Array();
+	const output: number[] = new Array<number>();
 	if (typeof end === 'undefined') {
 		end = start;
 		start = 0;
