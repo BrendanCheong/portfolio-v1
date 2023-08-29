@@ -18,7 +18,7 @@ const NotFound = () => {
 		});
 	}, []);
 	return (
-		<Layout title='404: Not Found | Brendan Cheong'>
+		<Layout title='404: Not Found | Brendan Cheong Portfolio'>
 			<Container>
 				<div
 					id='pageNotFound'
