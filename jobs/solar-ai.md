@@ -6,7 +6,7 @@ range: 'May 2022 - Aug 2022'
 url: 'https://getsolar.ai'
 techstack:
   ['Typescript', 'NextJS', 'Tailwind', 'AWS', 'GraphQL', 'ElasticSearch']
-index: 2
+index: 3
 ---
 
 - Built and launched a new customer portal, which allows over 100 customers to manage their solar installation and liaise with solar panel installers.

@@ -27,9 +27,6 @@ html,
 body {
 	scroll-behavior: smooth;
 	overflow-x: hidden;
-	background-color: #1d2021;
-	width: screen;
-	height: screen;
 }
 @media (min-width: 640px) {
 	#sideEmail::after {

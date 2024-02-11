@@ -2,9 +2,9 @@ export const techStack = [
 	'JavaScript (ES6+)',
 	'TypeScript',
 	'Amazon Web Services',
-	'React.js',
-	'Next.js',
-	'GraphQL',
+	'React',
+	'FastAPI',
+	'Express.js',
 ];
 
 export const KEY_CODES = {

@@ -8,13 +8,7 @@
 	"plugins": ["@typescript-eslint", "prettier"],
 	"rules": {
 		"no-eval": "error",
-		"no-unused-vars": [
-			"warn",
-			{
-				"args": "after-used",
-				"ignoreRestSiblings": true
-			}
-		],
+		"@typescript-eslint/no-unused-vars": "warn",
 		"no-unused-expressions": "warn",
 		"no-console": "warn",
 		"no-trailing-spaces": "error",

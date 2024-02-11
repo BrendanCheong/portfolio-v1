@@ -13,6 +13,7 @@
 		"**/*.{js,jsx,ts,tsx}": "prettier --write --ignore-unknown"
 	},
 	"dependencies": {
+		"@fontsource/dm-sans": "^5.0.18",
 		"@fontsource/poppins": "^4.5.0",
 		"@fontsource/roboto-mono": "^4.5.0",
 		"@types/d3": "^7.4.0",
